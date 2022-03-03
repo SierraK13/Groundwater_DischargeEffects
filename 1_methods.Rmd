@@ -1,7 +1,185 @@
-
-
-
 # Methods 
 
+```{r, include=FALSE}
 
-methods practice 
+library(dataRetrieval)
+library(tidyverse)
+library(trend)
+library(lubridate)
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+## Question
+
+What are some surface water discharge trends that could be analyzed before comparing to affects of ground water levels? 
+
+## Methods 
+
+```{r}
+
+site_ca <- "10265150" 
+q_ca <- readNWISdv(siteNumbers = site_ca, 
+                parameterCd = '00060', 
+                startDate = '1983-07-07', 
+                endDate = '2021-12-18') %>% 
+  rename(q_cfs = X_00060_00003) %>%
+  addWaterYear(.) %>%
+  select(-agency_cd, -X_00060_00003_cd)
+
+
+```
+
+## Monthly Water Trends
+
+```{r}
+
+q_month_means <- q_ca %>%
+  dplyr::mutate(month = month(Date),
+                year = year(Date)) %>%
+  group_by(year, month) %>%
+  summarize(q_mean = mean(q_cfs, na.rm = T))
+
+head(q_month_means) 
+
+```
+
+## Trends in September
+
+```{r}
+
+q_sept <- q_month_means %>%
+  filter(month ==9)
+
+ggplot(q_sept, aes( x= year, y= q_mean)) +
+  geom_point() + 
+  scale_y_log10() +
+  ylab('Q (cfs)') +
+  xlab('Water Year') 
+
+```
+
+## Test for Trends
+# Mann-Kendall independant trend test that does not correlate variables 
+
+```{r}
+
+mk.test(log10(q_sept$q_mean))
+
+sens.slope(q_sept$q_mean)
+
+```
+
+Describe trend. 
+
+From the graph and statistical test for the data from the month of September there is a slightly negative trend but not greatly significant. The p value is less than 0.05 meaning the data is less accurate to the actual trend and having a negative Sen's Slope refers to the small magnitude of the trend. However overall there seems to be a negative trend in the graph where discharge is decreasing over the years. 
+
+
+## Trend for March
+
+```{r}
+
+q_march <- q_month_means %>%
+  filter(month == 3)
+
+ggplot(q_march, aes( x= year, y= q_mean)) +
+  geom_point() + 
+  scale_y_log10() +
+  ylab('Q (cfs)') +
+  xlab('Water Year') 
+```
+
+## All months with minimum and median Q 
+
+```{r}
+q_stats <- q_ca %>%
+  dplyr::mutate(month = month(Date),
+                year = year(Date)) %>%
+  group_by(year, month) %>%
+  summarize(q_mean = mean(q_cfs, na.rm = T),
+            q_min = min(q_cfs),
+            q_med = median(q_cfs))
+
+head(q_stats)
+
+```
+
+## Plot of all months 
+
+```{r} 
+# mean
+
+ggplot(q_month_means, aes(x= year, y= q_mean)) +
+  geom_point() +
+  facet_wrap(~month, scales = 'free') + 
+  scale_y_log10() +
+  ylab('Mean Monthly Discharge') + 
+  xlab('Year')
+
+```
+
+```{r}
+# minimum
+
+ggplot(q_stats, aes(x= year, y= q_min)) +
+  geom_point() +
+  facet_wrap(~month, scales = 'free') +
+  scale_y_log10()+
+  ylab('Monthly Minimum Discharge') + 
+  xlab('Year')
+
+```
+
+```{r}
+# median
+
+ggplot(q_stats, aes(x= year, y= q_med)) +
+  geom_point() +
+  facet_wrap(~month, scales = 'free') +
+  scale_y_log10()+
+  ylab('Median Monthly Discharge') + 
+  xlab('Year')
+
+```
+
+Describe trends without a trend test. 
+
+All of these graphs have a general pattern where the highest values occur in May through September. Each month also has a slightly negative trend as the years go on which could correlate to drought conditions in the west. The negative trend is more noticeable in December which is usually the time of baseflows therefore can be subjectively supportive to the decreasing discharge hypothesis. 
+
+
+
+##Practice
+
+##Plot to compare median and minimum 
+
+Not sure how to make a nice legend 
+Easier coding to have multiple variables on a graph?
+
+```{r}
+
+ggplot(q_stats, aes(x= year)) +
+  geom_point(aes(y=q_mean), color = "purple") +
+  geom_point(aes(y=q_min), color = "light blue") +
+  geom_point(aes(y=q_med), color = " dark green") +
+  facet_wrap(~month, scales = 'free') +
+  scale_y_log10() +
+  ylab("Monthly Statistics") 
+
+```
+
+## Monthly stat comparison of June
+
+```{r}
+q_june <- q_stats %>%
+  filter(month == 6)
+
+ggplot(q_june, aes(x= year)) +
+  geom_point(aes(y=q_mean), color = "purple") +
+  geom_point(aes(y=q_min), color = "light blue") +
+  geom_point(aes(y=q_med), color = " dark green") +
+  scale_y_log10() +
+  ylab("Monthly Statistics") +
+  xlab("Year")
+```
+
