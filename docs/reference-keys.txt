@@ -1,0 +1,4 @@
+index
+r-markdown
+including-plots
+methods

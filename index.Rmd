@@ -1,9 +1,14 @@
 ---
-title: "Introduction for California GW"
+title: "Final Final"
 author: "Sierra Klemme"
-date: "3/1/2022"
-output: html_document
----
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+  #bookdown::pdf_book: default
+--- 
+
+# index
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
