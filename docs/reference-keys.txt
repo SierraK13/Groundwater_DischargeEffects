@@ -15,3 +15,13 @@ trend-for-march
 all-months-with-minimum-and-median-q
 plot-of-all-months
 monthly-stat-comparison-of-june
+abstract
+background
+question-1
+watershed-delineation
+data-acquisition
+data-description
+data-plots
+interpretation
+results
+site-analysis

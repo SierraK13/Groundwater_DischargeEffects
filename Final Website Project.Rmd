@@ -1,4 +1,25 @@
 ---
+title: "Final Final"
+author: "Sierra Klemme"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: bib440.bib 
+output:
+  bookdown::gitbook: default
+  #bookdown::pdf_book: default
+--- 
+
+# index
+
+Placeholder
+
+
+## subheader
+### sub-sub header 
+
+<!--chapter:end:index.Rmd-->
+
+---
 title: "methods"
 author: "Sierra Klemme"
 date: "3/9/2022"
@@ -37,7 +58,7 @@ site_coords_CA1 <- readNWISsite("10265150") %>%
   st_transform(crs = 4269)
 
 
-CAwatershed <- st_read('Groundwater_DischargeEffects/MammothCA.geojson') %>% dplyr::filter(id== 'globalwatershed') 
+CAwatershed <- st_read('Data/MammothCA.geojson') %>% dplyr::filter(id== 'globalwatershed') 
 
 mapview(CAwatershed) + mapview(site_coords_CA1)
 ```
@@ -104,4 +125,31 @@ ggplot(depth_1, aes(x = Date, y = waterdepth)) +
 ### Interpretation 
 
 The discharge plot above shows data between 1983 and 2021. Throughout this time period there are several significant spikes with high discharge amounts around 300 cfs. A decreasing pattern seems to have occurred in the last decade with less spikes. 
+
+
+<!--chapter:end:1_methods.Rmd-->
+
+
+
+`r if (knitr:: is_html_output()) '# Refrences {-}'`
+
+
+<!--chapter:end:wrapping_up.Rmd-->
+
+
+# Results  
+
+Placeholder
+
+
+## Site Analysis  
+## Monthly Water Trends
+## Trends in September
+## Test for Trends
+## Trend for March
+## All months with minimum and median Q 
+## Plot of all months 
+## Monthly stat comparison of June
+
+<!--chapter:end:2_results.Rmd-->
 
