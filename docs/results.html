@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="refrences.html"/>
-<link rel="next" href="question-in-consideration.html"/>
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="refrences.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -177,26 +177,15 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#site-description"><i class="fa fa-check"></i><b>2.1</b> Site Description</a></li>
 <li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#watershed-delineation"><i class="fa fa-check"></i><b>2.2</b> Watershed Delineation</a></li>
-<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#data-acquisition"><i class="fa fa-check"></i><b>2.3</b> Data Acquisition</a></li>
-<li class="chapter" data-level="2.4" data-path="methods.html"><a href="methods.html#data-description"><i class="fa fa-check"></i><b>2.4</b> Data Description</a></li>
-<li class="chapter" data-level="2.5" data-path="methods.html"><a href="methods.html#data-plots"><i class="fa fa-check"></i><b>2.5</b> Data Plots</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="methods.html"><a href="methods.html#interpretation"><i class="fa fa-check"></i><b>2.5.1</b> Interpretation</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#data-acquisition"><i class="fa fa-check"></i><b>3.1</b> Data Acquisition</a></li>
+<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#attribute-analysis"><i class="fa fa-check"></i><b>3.2</b> Attribute Analysis</a></li>
+<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#statistical-trend-analysis"><i class="fa fa-check"></i><b>3.3</b> Statistical Trend Analysis</a></li>
+<li class="chapter" data-level="3.4" data-path="results.html"><a href="results.html#annual-discharge-minimum-median-mean"><i class="fa fa-check"></i><b>3.4</b> Annual Discharge minimum, median, mean</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="refrences.html"><a href="refrences.html"><i class="fa fa-check"></i>Refrences</a></li>
-<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a></li>
-<li class="chapter" data-level="4" data-path="question-in-consideration.html"><a href="question-in-consideration.html"><i class="fa fa-check"></i><b>4</b> Question in Consideration</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="question-in-consideration.html"><a href="question-in-consideration.html#site-analysis"><i class="fa fa-check"></i><b>4.1</b> Site Analysis</a></li>
-<li class="chapter" data-level="4.2" data-path="question-in-consideration.html"><a href="question-in-consideration.html#monthly-water-trends"><i class="fa fa-check"></i><b>4.2</b> Monthly Water Trends</a></li>
-<li class="chapter" data-level="4.3" data-path="question-in-consideration.html"><a href="question-in-consideration.html#trends-in-september"><i class="fa fa-check"></i><b>4.3</b> Trends in September</a></li>
-<li class="chapter" data-level="4.4" data-path="question-in-consideration.html"><a href="question-in-consideration.html#test-for-trends"><i class="fa fa-check"></i><b>4.4</b> Test for Trends</a></li>
-<li class="chapter" data-level="4.5" data-path="question-in-consideration.html"><a href="question-in-consideration.html#trend-for-march"><i class="fa fa-check"></i><b>4.5</b> Trend for March</a></li>
-<li class="chapter" data-level="4.6" data-path="question-in-consideration.html"><a href="question-in-consideration.html#all-months-with-minimum-and-median-q"><i class="fa fa-check"></i><b>4.6</b> All months with minimum and median Q</a></li>
-<li class="chapter" data-level="4.7" data-path="question-in-consideration.html"><a href="question-in-consideration.html#plot-of-all-months"><i class="fa fa-check"></i><b>4.7</b> Plot of all months</a></li>
-<li class="chapter" data-level="4.8" data-path="question-in-consideration.html"><a href="question-in-consideration.html#monthly-stat-comparison-of-june"><i class="fa fa-check"></i><b>4.8</b> Monthly stat comparison of June</a></li>
-</ul></li>
 </ul>
 
       </nav>
@@ -216,14 +205,191 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="results" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Results</h1>
+<div id="data-acquisition" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Data Acquisition</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="results.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Surface water discharge data</span></span>
+<span id="cb4-2"><a href="results.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="results.html#cb4-3" aria-hidden="true" tabindex="-1"></a>site_ca <span class="ot">&lt;-</span> <span class="st">&quot;10265150&quot;</span> <span class="co"># USGS site number for Hot C A Flume near Mammoth Lakes</span></span>
+<span id="cb4-4"><a href="results.html#cb4-4" aria-hidden="true" tabindex="-1"></a>q_ca <span class="ot">&lt;-</span> <span class="fu">readNWISdv</span>(<span class="at">siteNumbers =</span> site_ca, </span>
+<span id="cb4-5"><a href="results.html#cb4-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">parameterCd =</span> <span class="st">&#39;00060&#39;</span>, </span>
+<span id="cb4-6"><a href="results.html#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">startDate =</span> <span class="st">&#39;1983-07-07&#39;</span>, </span>
+<span id="cb4-7"><a href="results.html#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">endDate =</span> <span class="st">&#39;2021-12-18&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="results.html#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">q_cfs =</span> X_00060_00003)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="results.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Ground water data---Still need to figure out how to collect data</span></span>
+<span id="cb5-2"><a href="results.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="results.html#cb5-3" aria-hidden="true" tabindex="-1"></a>site_ca_gw <span class="ot">&lt;-</span> <span class="st">&quot;373845118574202&quot;</span> <span class="co"># USGS site number for GW gage near Mammoth Lakes</span></span>
+<span id="cb5-4"><a href="results.html#cb5-4" aria-hidden="true" tabindex="-1"></a>depth_1 <span class="ot">&lt;-</span> <span class="fu">readNWISuv</span>(<span class="at">siteNumbers =</span> site_ca_gw,</span>
+<span id="cb5-5"><a href="results.html#cb5-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">parameterCd =</span> <span class="st">&#39;72019&#39;</span>,</span>
+<span id="cb5-6"><a href="results.html#cb5-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">startDate =</span> <span class="st">&#39;2021-01-07&#39;</span>, </span>
+<span id="cb5-7"><a href="results.html#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">endDate =</span> <span class="st">&#39;2021-12-18&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="results.html#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">waterdepth =</span> X_72019_00000)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="results.html#cb6-1" aria-hidden="true" tabindex="-1"></a>site_ca <span class="ot">&lt;-</span> <span class="st">&quot;10265150&quot;</span> </span>
+<span id="cb6-2"><a href="results.html#cb6-2" aria-hidden="true" tabindex="-1"></a>q_ca <span class="ot">&lt;-</span> <span class="fu">readNWISdv</span>(<span class="at">siteNumbers =</span> site_ca, </span>
+<span id="cb6-3"><a href="results.html#cb6-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">parameterCd =</span> <span class="st">&#39;00060&#39;</span>, </span>
+<span id="cb6-4"><a href="results.html#cb6-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">startDate =</span> <span class="st">&#39;1983-07-07&#39;</span>, </span>
+<span id="cb6-5"><a href="results.html#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">endDate =</span> <span class="st">&#39;2021-12-18&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-6"><a href="results.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">q_cfs =</span> X_00060_00003) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="results.html#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addWaterYear</span>(.) <span class="sc">%&gt;%</span></span>
+<span id="cb6-8"><a href="results.html#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>agency_cd, <span class="sc">-</span>X_00060_00003_cd)</span></code></pre></div>
+</div>
+<div id="attribute-analysis" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Attribute Analysis</h2>
+<p>Water Table</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="results.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(depth_1, <span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> waterdepth)) <span class="sc">+</span> </span>
+<span id="cb7-2"><a href="results.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="results.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>)</span></code></pre></div>
+<p>Surface Water Discharge</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="results.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_ca, <span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> q_cfs)) <span class="sc">+</span> </span>
+<span id="cb8-2"><a href="results.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="results.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>)</span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Monthly Water Trends</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="results.html#cb9-1" aria-hidden="true" tabindex="-1"></a>q_month_means <span class="ot">&lt;-</span> q_ca <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="results.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
+<span id="cb9-3"><a href="results.html#cb9-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="results.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="results.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">q_mean =</span> <span class="fu">mean</span>(q_cfs, <span class="at">na.rm =</span> T))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="results.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(q_month_means) </span></code></pre></div>
+<pre><code>## # A tibble: 6 x 3
+## # Groups:   year [1]
+##    year month q_mean
+##   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1  1983     7  209. 
+## 2  1983     8  155. 
+## 3  1983     9  103. 
+## 4  1983    10   90.6
+## 5  1983    11   84.2
+## 6  1983    12   78.3</code></pre>
+<p>Discharge Trends in September</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="results.html#cb13-1" aria-hidden="true" tabindex="-1"></a>q_sept <span class="ot">&lt;-</span> q_month_means <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="results.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">==</span><span class="dv">9</span>)</span>
+<span id="cb13-3"><a href="results.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="results.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_sept, <span class="fu">aes</span>( <span class="at">x=</span> year, <span class="at">y=</span> q_mean)) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="results.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb13-6"><a href="results.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb13-7"><a href="results.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>) <span class="sc">+</span></span>
+<span id="cb13-8"><a href="results.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Water Year&#39;</span>) </span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Discharge Trends in March</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="results.html#cb14-1" aria-hidden="true" tabindex="-1"></a>q_march <span class="ot">&lt;-</span> q_month_means <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="results.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">3</span>)</span>
+<span id="cb14-3"><a href="results.html#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="results.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_march, <span class="fu">aes</span>( <span class="at">x=</span> year, <span class="at">y=</span> q_mean)) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="results.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb14-6"><a href="results.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb14-7"><a href="results.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>) <span class="sc">+</span></span>
+<span id="cb14-8"><a href="results.html#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Water Year&#39;</span>) </span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="statistical-trend-analysis" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Statistical Trend Analysis</h2>
+<p>Mann-Kendall Test</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="results.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(q_sept<span class="sc">$</span>q_mean))</span></code></pre></div>
+<pre><code>## 
+##  Mann-Kendall trend test
+## 
+## data:  log10(q_sept$q_mean)
+## z = -2.5645, n = 39, p-value = 0.01033
+## alternative hypothesis: true S is not equal to 0
+## sample estimates:
+##            S         varS          tau 
+## -213.0000000 6833.6666667   -0.2874494</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="results.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(q_sept<span class="sc">$</span>q_mean)</span></code></pre></div>
+<pre><code>## 
+##  Sen&#39;s slope
+## 
+## data:  q_sept$q_mean
+## z = -2.5645, n = 39, p-value = 0.01033
+## alternative hypothesis: true z is not equal to 0
+## 95 percent confidence interval:
+##  -0.99555556 -0.08291667
+## sample estimates:
+## Sen&#39;s slope 
+##        -0.5</code></pre>
+</div>
+<div id="annual-discharge-minimum-median-mean" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Annual Discharge minimum, median, mean</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="results.html#cb19-1" aria-hidden="true" tabindex="-1"></a>q_stats <span class="ot">&lt;-</span> q_ca <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="results.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
+<span id="cb19-3"><a href="results.html#cb19-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="results.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month) <span class="sc">%&gt;%</span></span>
+<span id="cb19-5"><a href="results.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">q_mean =</span> <span class="fu">mean</span>(q_cfs, <span class="at">na.rm =</span> T),</span>
+<span id="cb19-6"><a href="results.html#cb19-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">q_min =</span> <span class="fu">min</span>(q_cfs),</span>
+<span id="cb19-7"><a href="results.html#cb19-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">q_med =</span> <span class="fu">median</span>(q_cfs))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="results.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(q_stats)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 5
+## # Groups:   year [1]
+##    year month q_mean q_min q_med
+##   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  1983     7  209.    182 192. 
+## 2  1983     8  155.    117 157  
+## 3  1983     9  103.     90  99.5
+## 4  1983    10   90.6    80  91  
+## 5  1983    11   84.2    74  84.5
+## 6  1983    12   78.3    69  77</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="results.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean</span></span>
+<span id="cb23-2"><a href="results.html#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="results.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_month_means, <span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y=</span> q_mean)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="results.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="results.html#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>month, <span class="at">scales =</span> <span class="st">&#39;free&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb23-6"><a href="results.html#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb23-7"><a href="results.html#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Mean Monthly Discharge&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb23-8"><a href="results.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year&#39;</span>)</span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="results.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># minimum</span></span>
+<span id="cb24-2"><a href="results.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="results.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_stats, <span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y=</span> q_min)) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="results.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb24-5"><a href="results.html#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>month, <span class="at">scales =</span> <span class="st">&#39;free&#39;</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a href="results.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()<span class="sc">+</span></span>
+<span id="cb24-7"><a href="results.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Monthly Minimum Discharge&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb24-8"><a href="results.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year&#39;</span>)</span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="results.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median</span></span>
+<span id="cb25-2"><a href="results.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="results.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_stats, <span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y=</span> q_med)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="results.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="results.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>month, <span class="at">scales =</span> <span class="st">&#39;free&#39;</span>) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="results.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()<span class="sc">+</span></span>
+<span id="cb25-7"><a href="results.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Median Monthly Discharge&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb25-8"><a href="results.html#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year&#39;</span>)</span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>##Practice</p>
+<p>Plot to compare median and minimum</p>
+<p>Not sure how to make a nice legend
+Easier coding to have multiple variables on a graph?</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="results.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_stats, <span class="fu">aes</span>(<span class="at">x=</span> year)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="results.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_mean), <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="results.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_min), <span class="at">color =</span> <span class="st">&quot;light blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="results.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_med), <span class="at">color =</span> <span class="st">&quot; dark green&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-5"><a href="results.html#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>month, <span class="at">scales =</span> <span class="st">&#39;free&#39;</span>) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="results.html#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb26-7"><a href="results.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Monthly Statistics&quot;</span>) </span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Monthly stat comparison of June</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="results.html#cb27-1" aria-hidden="true" tabindex="-1"></a>q_june <span class="ot">&lt;-</span> q_stats <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="results.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">6</span>)</span>
+<span id="cb27-3"><a href="results.html#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="results.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_june, <span class="fu">aes</span>(<span class="at">x=</span> year)) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="results.html#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_mean), <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="results.html#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_min), <span class="at">color =</span> <span class="st">&quot;light blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-7"><a href="results.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>q_med), <span class="at">color =</span> <span class="st">&quot; dark green&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-8"><a href="results.html#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb27-9"><a href="results.html#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Monthly Statistics&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-10"><a href="results.html#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Year&quot;</span>)</span></code></pre></div>
+<p><img src="Final-Website-Project_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="refrences.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="question-in-consideration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="refrences.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
