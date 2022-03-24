@@ -9,22 +9,6 @@ output:
   #bookdown::pdf_book: default
 --- 
 
-# index
-
-# big header
-## subheader
-### sub-sub header 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Question
-
-How is climate change affecting ground water levels that can influence base flows 
-in surface water discharge along Hot Creek near Mammoth Lakes, California?
-
-
 # Abstract
 
   Within recent decades groundwater research has increased in significance due to 
@@ -37,7 +21,7 @@ recharge. Such as any other process, the hydrologic cycle is
 effected by outside factors. The term "hydrogeologic environment" 
 coined by hydrogeologist J.Tóth denotes the need to acknowledge the 
 effects of topography, geology, and climate to further understand
-GW and SW interaction [@440170]. 
+GW and SW interaction [@sophocleous_interactions_2002]. 
 Previous research has often defined base flows of surface water 
 systems to be sourced by upstream ground water storage's 
 [@brutsaert_long-term_2008]. With this reference, benefits from
@@ -45,22 +29,12 @@ looking at global changes in temperature and precipitation include
 ways to predict ground water levels impacts on surface water 
 discharge
 and how the overall water budget is being effected by global 
-climate change [huntington_role_2012]. 
+climate change [huntington_role_2012].
 
-# Background
 
-  For this report a deeper look at the
-impacts of climate change on the interactions between ground water
-and surface water will 
-be analyzed 
-at stations near Mammoth Lakes California along Hot Creek. This
-site seemingly presents the process of water transfer between
-GW and Sw where there are a grouping of ground water monitors 
-upstream of a surface water monitor along the Hot Creek. Mammoth
-Lakes is at 7,880 feet in elevation with soils of low infiltration
-and located in a pre-dominantly Mediterranean climate [web soil & plantmaps].
-Annual data from several GW sites and one SW site will help analyze
-the influences of climate change, ground water, and surface water
-on attributes such as water table levels and discharge rates. 
-  
+## Research Question
+
+How is climate change affecting ground water levels that can influence base flows 
+in surface water discharge along Hot Creek near Mammoth Lakes, California?
+
 

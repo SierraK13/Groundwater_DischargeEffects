@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Final Final</title>
-  <meta name="description" content="Final Final" />
+  <title>methods</title>
+  <meta name="description" content="methods" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Final Final" />
+  <meta property="og:title" content="methods" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Final Final" />
+  <meta name="twitter:title" content="methods" />
   
   
   
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="big-header.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,8 +52,87 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet" />
+<script src="libs/HomeButton-0.0.1/home-button.js"></script>
+<script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
+<script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet" />
+<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet" />
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -90,38 +169,33 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> index</a></li>
-<li class="chapter" data-level="2" data-path="big-header.html"><a href="big-header.html"><i class="fa fa-check"></i><b>2</b> big header</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Abstract</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="big-header.html"><a href="big-header.html#subheader"><i class="fa fa-check"></i><b>2.1</b> subheader</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="big-header.html"><a href="big-header.html#sub-sub-header"><i class="fa fa-check"></i><b>2.1.1</b> sub-sub header</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#research-question"><i class="fa fa-check"></i><b>1.1</b> Research Question</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i><b>3</b> Question</a></li>
-<li class="chapter" data-level="4" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i><b>4</b> Abstract</a></li>
-<li class="chapter" data-level="5" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>5</b> Background</a></li>
-<li class="chapter" data-level="6" data-path="question-1.html"><a href="question-1.html"><i class="fa fa-check"></i><b>6</b> Question</a>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="question-1.html"><a href="question-1.html#watershed-delineation"><i class="fa fa-check"></i><b>6.1</b> Watershed Delineation</a></li>
-<li class="chapter" data-level="6.2" data-path="question-1.html"><a href="question-1.html#data-acquisition"><i class="fa fa-check"></i><b>6.2</b> Data Acquisition</a></li>
-<li class="chapter" data-level="6.3" data-path="question-1.html"><a href="question-1.html#data-description"><i class="fa fa-check"></i><b>6.3</b> Data Description</a></li>
-<li class="chapter" data-level="6.4" data-path="question-1.html"><a href="question-1.html#data-plots"><i class="fa fa-check"></i><b>6.4</b> Data Plots</a>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#site-description"><i class="fa fa-check"></i><b>2.1</b> Site Description</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#watershed-delineation"><i class="fa fa-check"></i><b>2.2</b> Watershed Delineation</a></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#data-acquisition"><i class="fa fa-check"></i><b>2.3</b> Data Acquisition</a></li>
+<li class="chapter" data-level="2.4" data-path="methods.html"><a href="methods.html#data-description"><i class="fa fa-check"></i><b>2.4</b> Data Description</a></li>
+<li class="chapter" data-level="2.5" data-path="methods.html"><a href="methods.html#data-plots"><i class="fa fa-check"></i><b>2.5</b> Data Plots</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="question-1.html"><a href="question-1.html#interpretation"><i class="fa fa-check"></i><b>6.4.1</b> Interpretation</a></li>
+<li class="chapter" data-level="2.5.1" data-path="methods.html"><a href="methods.html#interpretation"><i class="fa fa-check"></i><b>2.5.1</b> Interpretation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="refrences.html"><a href="refrences.html"><i class="fa fa-check"></i>Refrences</a></li>
-<li class="chapter" data-level="7" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>7</b> Results</a>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a></li>
+<li class="chapter" data-level="4" data-path="question-in-consideration.html"><a href="question-in-consideration.html"><i class="fa fa-check"></i><b>4</b> Question in Consideration</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="results.html"><a href="results.html#site-analysis"><i class="fa fa-check"></i><b>7.1</b> Site Analysis</a></li>
-<li class="chapter" data-level="7.2" data-path="results.html"><a href="results.html#monthly-water-trends"><i class="fa fa-check"></i><b>7.2</b> Monthly Water Trends</a></li>
-<li class="chapter" data-level="7.3" data-path="results.html"><a href="results.html#trends-in-september"><i class="fa fa-check"></i><b>7.3</b> Trends in September</a></li>
-<li class="chapter" data-level="7.4" data-path="results.html"><a href="results.html#test-for-trends"><i class="fa fa-check"></i><b>7.4</b> Test for Trends</a></li>
-<li class="chapter" data-level="7.5" data-path="results.html"><a href="results.html#trend-for-march"><i class="fa fa-check"></i><b>7.5</b> Trend for March</a></li>
-<li class="chapter" data-level="7.6" data-path="results.html"><a href="results.html#all-months-with-minimum-and-median-q"><i class="fa fa-check"></i><b>7.6</b> All months with minimum and median Q</a></li>
-<li class="chapter" data-level="7.7" data-path="results.html"><a href="results.html#plot-of-all-months"><i class="fa fa-check"></i><b>7.7</b> Plot of all months</a></li>
-<li class="chapter" data-level="7.8" data-path="results.html"><a href="results.html#monthly-stat-comparison-of-june"><i class="fa fa-check"></i><b>7.8</b> Monthly stat comparison of June</a></li>
+<li class="chapter" data-level="4.1" data-path="question-in-consideration.html"><a href="question-in-consideration.html#site-analysis"><i class="fa fa-check"></i><b>4.1</b> Site Analysis</a></li>
+<li class="chapter" data-level="4.2" data-path="question-in-consideration.html"><a href="question-in-consideration.html#monthly-water-trends"><i class="fa fa-check"></i><b>4.2</b> Monthly Water Trends</a></li>
+<li class="chapter" data-level="4.3" data-path="question-in-consideration.html"><a href="question-in-consideration.html#trends-in-september"><i class="fa fa-check"></i><b>4.3</b> Trends in September</a></li>
+<li class="chapter" data-level="4.4" data-path="question-in-consideration.html"><a href="question-in-consideration.html#test-for-trends"><i class="fa fa-check"></i><b>4.4</b> Test for Trends</a></li>
+<li class="chapter" data-level="4.5" data-path="question-in-consideration.html"><a href="question-in-consideration.html#trend-for-march"><i class="fa fa-check"></i><b>4.5</b> Trend for March</a></li>
+<li class="chapter" data-level="4.6" data-path="question-in-consideration.html"><a href="question-in-consideration.html#all-months-with-minimum-and-median-q"><i class="fa fa-check"></i><b>4.6</b> All months with minimum and median Q</a></li>
+<li class="chapter" data-level="4.7" data-path="question-in-consideration.html"><a href="question-in-consideration.html#plot-of-all-months"><i class="fa fa-check"></i><b>4.7</b> Plot of all months</a></li>
+<li class="chapter" data-level="4.8" data-path="question-in-consideration.html"><a href="question-in-consideration.html#monthly-stat-comparison-of-june"><i class="fa fa-check"></i><b>4.8</b> Monthly stat comparison of June</a></li>
 </ul></li>
 </ul>
 
@@ -132,7 +206,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Final Final</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">methods</a>
           </h1>
         </div>
 
@@ -141,11 +215,37 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Final Final</h1>
+<h1 class="title">methods</h1>
 <p class="author"><em>Sierra Klemme</em></p>
+<p class="date"><em>3/9/2022</em></p>
 </div>
-<div id="index" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> index</h1>
+<div id="abstract" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Abstract</h1>
+<p>Within recent decades groundwater research has increased in significance due to
+its significant interactions with surface water. The
+understanding of these two water sources has also gained popularity because of their representation of the global fresh water supply.
+Groundwater and surface water (GW, SW) are not independent sources
+but rather influential systems
+that effects several hydrologic characteristics such as baseflow and
+recharge. Such as any other process, the hydrologic cycle is
+effected by outside factors. The term “hydrogeologic environment”
+coined by hydrogeologist J.Tóth denotes the need to acknowledge the
+effects of topography, geology, and climate to further understand
+GW and SW interaction <span class="citation">(Sophocleous 2002)</span>.
+Previous research has often defined base flows of surface water
+systems to be sourced by upstream ground water storage’s
+<span class="citation">(Brutsaert 2008)</span>. With this reference, benefits from
+looking at global changes in temperature and precipitation include
+ways to predict ground water levels impacts on surface water
+discharge
+and how the overall water budget is being effected by global
+climate change [huntington_role_2012].</p>
+<div id="research-question" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Research Question</h2>
+<p>How is climate change affecting ground water levels that can influence base flows
+in surface water discharge along Hot Creek near Mammoth Lakes, California?</p>
+
+</div>
 </div>
             </section>
 
@@ -153,7 +253,7 @@ div.csl-indent {
         </div>
       </div>
 
-<a href="big-header.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="methods.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

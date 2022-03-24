@@ -11,13 +11,31 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Question
+## Data Acquisition 
 
-How is climate change affecting ground water levels that can influence base flows 
-in surface water discharge along Hot Creek near Mammoth Lakes, California?
+```{r}
+##Surface water discharge data
+
+site_ca <- "10265150" # USGS site number for Hot C A Flume near Mammoth Lakes
+q_ca <- readNWISdv(siteNumbers = site_ca, 
+                parameterCd = '00060', 
+                startDate = '1983-07-07', 
+                endDate = '2021-12-18') %>% 
+  rename(q_cfs = X_00060_00003)
+```
 
 
-## Site Analysis  
+```{r, eval=FALSE}
+##Ground water data---Still need to figure out how to collect data
+
+site_ca_gw <- "373845118574202" # USGS site number for GW gage near Mammoth Lakes
+depth_1 <- readNWISuv(siteNumbers = site_ca_gw,
+                       parameterCd = '72019',
+                startDate = '2021-01-07', 
+                endDate = '2021-12-18') %>%
+  rename(waterdepth = X_72019_00000)
+```
+
 
 ```{r}
 
@@ -33,7 +51,25 @@ q_ca <- readNWISdv(siteNumbers = site_ca,
 
 ```
 
-## Monthly Water Trends
+## Attribute Analysis
+
+Water Table 
+
+```{r, eval=FALSE}
+ggplot(depth_1, aes(x = Date, y = waterdepth)) + 
+  geom_line() + 
+  ylab('Q (cfs)')
+```
+
+Surface Water Discharge
+
+```{r}
+ggplot(q_ca, aes(x = Date, y = q_cfs)) + 
+  geom_line() + 
+  ylab('Q (cfs)')
+```
+
+Monthly Water Trends
 
 ```{r}
 
@@ -47,7 +83,7 @@ head(q_month_means)
 
 ```
 
-## Trends in September
+Discharge Trends in September
 
 ```{r}
 
@@ -62,23 +98,7 @@ ggplot(q_sept, aes( x= year, y= q_mean)) +
 
 ```
 
-## Test for Trends
-# Mann-Kendall independant trend test that does not correlate variables 
-
-```{r}
-
-mk.test(log10(q_sept$q_mean))
-
-sens.slope(q_sept$q_mean)
-
-```
-
-Describe trend. 
-
-From the graph and statistical test for the data from the month of September there is a slightly negative trend but not greatly significant. The p value is less than 0.05 meaning the data is less accurate to the actual trend and having a negative Sen's Slope refers to the small magnitude of the trend. However overall there seems to be a negative trend in the graph where discharge is decreasing over the years. 
-
-
-## Trend for March
+Discharge Trends in March
 
 ```{r}
 
@@ -92,7 +112,19 @@ ggplot(q_march, aes( x= year, y= q_mean)) +
   xlab('Water Year') 
 ```
 
-## All months with minimum and median Q 
+## Statistical Trend Analysis
+
+Mann-Kendall Test
+```{r}
+
+mk.test(log10(q_sept$q_mean))
+
+sens.slope(q_sept$q_mean)
+
+```
+
+
+## Annual Discharge minimum, median, mean  
 
 ```{r}
 q_stats <- q_ca %>%
@@ -107,7 +139,6 @@ head(q_stats)
 
 ```
 
-## Plot of all months 
 
 ```{r} 
 # mean
@@ -145,15 +176,11 @@ ggplot(q_stats, aes(x= year, y= q_med)) +
 
 ```
 
-Describe trends without a trend test. 
-
-All of these graphs have a general pattern where the highest values occur in May through September. Each month also has a slightly negative trend as the years go on which could correlate to drought conditions in the west. The negative trend is more noticeable in December which is usually the time of baseflows therefore can be subjectively supportive to the decreasing discharge hypothesis. 
-
 
 
 ##Practice
 
-##Plot to compare median and minimum 
+Plot to compare median and minimum 
 
 Not sure how to make a nice legend 
 Easier coding to have multiple variables on a graph?
@@ -170,7 +197,7 @@ ggplot(q_stats, aes(x= year)) +
 
 ```
 
-## Monthly stat comparison of June
+Monthly stat comparison of June
 
 ```{r}
 q_june <- q_stats %>%
