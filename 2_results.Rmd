@@ -10,55 +10,53 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
-
 ## Data Acquisition 
 
 ```{r}
 ##Surface water discharge data
 
-site_ca <- "10265150" # USGS site number for Hot C A Flume near Mammoth Lakes
+site_ca <- "10265150" 
 q_ca <- readNWISdv(siteNumbers = site_ca, 
                 parameterCd = '00060', 
-                startDate = '1983-07-07', 
-                endDate = '2021-12-18') %>% 
-  rename(q_cfs = X_00060_00003)
-```
+                startDate = '1992-01-19', 
+                endDate = '2022-04-06') %>% 
+  rename(q_cfs = X_00060_00003) %>%
+  addWaterYear(.) %>%
+  select(-agency_cd, -X_00060_00003_cd) %>%
+  mutate(Site = "Hot CA Flume SW") %>%
+  select(-site_no)
 
 
-```{r, eval=FALSE}
-##Ground water data---Still need to figure out how to collect data
-
-site_ca_gw <- "373845118574202" # USGS site number for GW gage near Mammoth Lakes
-depth_1 <- readNWISuv(siteNumbers = site_ca_gw,
-                       parameterCd = '72019',
-                startDate = '2021-01-07', 
-                endDate = '2021-12-18') %>%
-  rename(waterdepth = X_72019_00000)
 ```
 
 
 ```{r}
+##Ground water data
 
-site_ca <- "10265150" 
-q_ca <- readNWISdv(siteNumbers = site_ca, 
-                parameterCd = '00060', 
-                startDate = '1983-07-07', 
-                endDate = '2021-12-18') %>% 
-  rename(q_cfs = X_00060_00003) %>%
-  addWaterYear(.) %>%
-  select(-agency_cd, -X_00060_00003_cd)
+gw_depth <- read_csv('gw_data.csv')
 
+gw_depth <- gw_depth %>%
+  mutate(Site = "Hot Creek GW") %>%
+  select(-site)
+
+```
+
+```{r}
+##Climate Data
+
+mam_climate <- read_csv('Date_Mammoth_climate.csv')
 
 ```
 
 ## Attribute Analysis
 
-Water Table 
+Groundwater Depth 
 
-```{r, eval=FALSE}
-ggplot(depth_1, aes(x = Date, y = waterdepth)) + 
+```{r}
+ggplot(gw_depth, aes(x = Date, y = water_depth)) + 
   geom_line() + 
-  ylab('Q (cfs)')
+  ylab('Ground Water Depth (feet)') +
+  theme_bw()
 ```
 
 Surface Water Discharge
@@ -66,7 +64,57 @@ Surface Water Discharge
 ```{r}
 ggplot(q_ca, aes(x = Date, y = q_cfs)) + 
   geom_line() + 
-  ylab('Q (cfs)')
+  ylab('Q (cfs)') +
+  theme_bw()
+```
+
+GW and SW Long
+
+```{r}
+
+sw_gw <- left_join(gw_depth, q_ca, by = "Date")
+
+sw_gw_graph <- ggplot() +
+    geom_line(data = sw_gw, aes(x=Date, y=water_depth*3), color = 'grey') +  
+    geom_line(data = sw_gw, aes(x=Date, y=q_cfs), color = 'lightblue') 
+
+   
+sw_gw_graph + scale_y_continuous(sec.axis = sec_axis(~./3)) + 
+  theme_bw() + 
+  ylab("GW Depth(F)") +
+  xlab("Date")
+```
+
+Temperature and Precipitation 
+
+```{r}
+
+t_annual <- mam_climate %>%
+  dplyr::mutate(month = month(Date),
+                year = year(Date)) %>%
+  group_by(year) %>%
+  summarize(Avrg_T = mean(Avrg_T, na.rm = T)) 
+
+p_annual <- mam_climate %>%
+  dplyr::mutate(month = month(Date),
+                year = year(Date)) %>%
+  group_by(year) %>%
+  summarize(Precip = mean(Precip, na.rm = T))
+
+t_p_annual <- cbind(t_annual, p_annual) %>%
+  select(-3)
+
+ggplot(t_p_annual, aes(x=Avrg_T, y=Precip)) +
+  geom_point()
+
+t_p <- ggplot() +
+  geom_line(data = mam_climate, aes(x=Date, y= Avrg_T), color = 'red') +
+  geom_line(data = mam_climate, aes(x=Date, y=Precip), color = 'blue') 
+
+t_p + scale_y_continuous(sec.axis = sec_axis(~./1)) +
+  theme_bw() + 
+  ylab("Temp(F)") +
+  xlab("Date")
 ```
 
 Monthly Water Trends
@@ -83,132 +131,48 @@ head(q_month_means)
 
 ```
 
-Discharge Trends in September
+Discharge Trends for baseflow months
 
 ```{r}
 
-q_sept <- q_month_means %>%
-  filter(month ==9)
+q_base <- q_month_means %>% 
+  filter(month %in% c('7','8','9','10'))
 
-ggplot(q_sept, aes( x= year, y= q_mean)) +
-  geom_point() + 
+ggplot(q_base, aes( x= year, y= q_mean)) +
+  geom_point(aes(color = factor(month))) + 
   scale_y_log10() +
   ylab('Q (cfs)') +
-  xlab('Water Year') 
+  xlab('Water Year')+
+  scale_color_brewer()
 
-```
-
-Discharge Trends in March
-
-```{r}
-
-q_march <- q_month_means %>%
-  filter(month == 3)
-
-ggplot(q_march, aes( x= year, y= q_mean)) +
-  geom_point() + 
-  scale_y_log10() +
-  ylab('Q (cfs)') +
-  xlab('Water Year') 
 ```
 
 ## Statistical Trend Analysis
 
-Mann-Kendall Test
 ```{r}
+#Surface Water Discharge 
 
-mk.test(log10(q_sept$q_mean))
+mk.test(log10(q_month_means$q_mean))
 
-sens.slope(q_sept$q_mean)
+sens.slope(q_month_means$q_mean)
 
-```
+#Baseflow month trends
 
+mk.test(log10(q_base$q_mean))
 
-## Annual Discharge minimum, median, mean  
-
-```{r}
-q_stats <- q_ca %>%
-  dplyr::mutate(month = month(Date),
-                year = year(Date)) %>%
-  group_by(year, month) %>%
-  summarize(q_mean = mean(q_cfs, na.rm = T),
-            q_min = min(q_cfs),
-            q_med = median(q_cfs))
-
-head(q_stats)
-
-```
-
-
-```{r} 
-# mean
-
-ggplot(q_month_means, aes(x= year, y= q_mean)) +
-  geom_point() +
-  facet_wrap(~month, scales = 'free') + 
-  scale_y_log10() +
-  ylab('Mean Monthly Discharge') + 
-  xlab('Year')
+sens.slope(q_base$q_mean)
 
 ```
 
 ```{r}
-# minimum
+#Ground Water Level
 
-ggplot(q_stats, aes(x= year, y= q_min)) +
-  geom_point() +
-  facet_wrap(~month, scales = 'free') +
-  scale_y_log10()+
-  ylab('Monthly Minimum Discharge') + 
-  xlab('Year')
+mk.test(log10(gw_depth$water_depth))
 
-```
-
-```{r}
-# median
-
-ggplot(q_stats, aes(x= year, y= q_med)) +
-  geom_point() +
-  facet_wrap(~month, scales = 'free') +
-  scale_y_log10()+
-  ylab('Median Monthly Discharge') + 
-  xlab('Year')
-
+sens.slope(gw_depth$water_depth)
 ```
 
 
 
-##Practice
-
-Plot to compare median and minimum 
-
-Not sure how to make a nice legend 
-Easier coding to have multiple variables on a graph?
-
-```{r}
-
-ggplot(q_stats, aes(x= year)) +
-  geom_point(aes(y=q_mean), color = "purple") +
-  geom_point(aes(y=q_min), color = "light blue") +
-  geom_point(aes(y=q_med), color = " dark green") +
-  facet_wrap(~month, scales = 'free') +
-  scale_y_log10() +
-  ylab("Monthly Statistics") 
-
-```
-
-Monthly stat comparison of June
-
-```{r}
-q_june <- q_stats %>%
-  filter(month == 6)
-
-ggplot(q_june, aes(x= year)) +
-  geom_point(aes(y=q_mean), color = "purple") +
-  geom_point(aes(y=q_min), color = "light blue") +
-  geom_point(aes(y=q_med), color = " dark green") +
-  scale_y_log10() +
-  ylab("Monthly Statistics") +
-  xlab("Year")
-```
+## Annual Temperature 
 

@@ -1,0 +1,93 @@
+---
+title: "GW_DataPull"
+author: "Sierra Klemme"
+date: "4/7/2022"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(dataRetrieval)
+```
+
+GW close station 
+ 
+```{r}
+site_id <- '373930118491602'
+parameterCd <- '72019'
+startDate <- "1992-01-19"
+endDate <- "2022-04-06"
+
+rawData <- readNWISuv(site_id,parameterCd,startDate,endDate)
+
+gw <- readNWISdv(site_id,parameterCd,startDate,endDate) %>% select(-agency_cd, -X_72019_00003_cd) %>% 
+rename(water_depth = X_72019_00003, site = site_no)
+
+```
+
+```{r}
+dv <- rawData %>% 
+  mutate(day = day(dateTime), month = month(dateTime), year = year(dateTime)) %>% 
+   group_by(year, month, day) %>% 
+   summarize(water_depth = mean(X_72019_00000)) 
+ 
+ dv$Date <- as.Date(with(dv,paste(year, month, day,sep="-")),"%Y-%m-%d") 
+ 
+ dv$site <- "373930118491602"
+ 
+dv_filter <- dv %>% 
+   ungroup(year, month, day) %>% 
+   select(-year, - month, -day) %>% 
+   filter(Date > "2010-12-13")
+```
+
+```{r}
+gw_all <- rbind(gw, dv_filter)
+
+write_csv(gw_all, 'gw_all.csv')
+```
+
+GW distant station
+
+```{r}
+site_id_2 <- '373904118570702'
+parameterCd_2 <- '72019'
+startDate_2 <- "2016-01-14"
+endDate_2 <- "2022-04-11"
+
+
+rawData_2 <- readNWISuv(site_id_2,parameterCd_2,startDate_2,endDate_2)
+
+dv_2 <- rawData_2 %>% 
+  mutate(day = day(dateTime), month = month(dateTime), year = year(dateTime)) %>% 
+   group_by(year, month, day) %>% 
+   summarize(water_depth = mean(X_72019_00000)) 
+
+dv_2$Date <- as.Date(with(dv_2,paste(year, month, day,sep="-")),"%Y-%m-%d") 
+ 
+dv_2$site <- "373904118570702"
+
+dv2_filter <- dv_2 %>% 
+   ungroup(year, month, day) %>% 
+   select(-year, - month, -day) 
+
+```
+
+Combine close and far
+
+```{r}
+gw_site1 <- gw_all %>%
+  filter(Date > "2016-01-13") %>%
+  mutate(Site = "Site_1") %>%
+  select(-site)
+
+gw_site2 <- dv2_filter %>%
+  filter(Date < "2022-04-08") %>%
+  mutate(Site = "Site_2") %>%
+  select(-site)
+
+gw_both <- rbind(gw_site1, gw_site2) 
+
+```
+
+

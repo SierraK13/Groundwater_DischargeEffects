@@ -24,7 +24,8 @@ and surface water will be reviewed
 at stations near Mammoth Lakes California along Hot Creek. This
 site allows for water movement to be monitored due to the assumptions
 that groundwater due to various factors will later re-emerge into terrestrial
-water downstream of the groundwater source or aquifer [@kalbus_measuring_2006]. Mammoth Lakes 
+water downstream of the groundwater source or aquifer [@kalbus_measuring_2006].
+Mammoth Lakes 
 has a coincidental set up to show the process of water transfer between
 GW and SW due to a grouping of ground water monitors 
 upstream of a surface water monitor along Hot Creek. Mammoth

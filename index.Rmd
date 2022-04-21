@@ -32,17 +32,19 @@ discharge and how the overall water budget is being effected by global
 climate change [@huntington_role_2012].
 
   As anthropogenic effects become more notable in nature it raises a need 
-to understand GW and SW exchnages in order to protect one of our most valuable
+to understand GW and SW exchanges in order to protect one of our most valuable
 resources. With activities such as mining and contaminated runoff it is valuable 
 to quantify flows between GW and SW to help mitigate damage to the riparian area
-and decrease harm to organims who may ingest contaminated water [@kalbus_measuring_2006].
-Further studies of the lag 
+and decrease harm to organisms who may ingest contaminated water 
+[@kalbus_measuring_2006]. Further studies of the lag 
 
 
 
 ## Research Question
 
 How is climate change affecting ground water levels that can influence base flows 
-in surface water discharge along Hot Creek near Mammoth Lakes, California?
+in surface water discharge along Hot Creek near Mammoth Lakes, California? Specifically,
+the attributes in consideration are temperature, precipitation, ground water 
+depth, and surface water discharge raters. 
 
 

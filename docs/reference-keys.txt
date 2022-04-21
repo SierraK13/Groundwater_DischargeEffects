@@ -7,4 +7,4 @@ results
 data-acquisition
 attribute-analysis
 statistical-trend-analysis
-annual-discharge-minimum-median-mean
+annual-temperature
