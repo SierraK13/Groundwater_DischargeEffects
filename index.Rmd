@@ -9,7 +9,7 @@ output:
   #bookdown::pdf_book: default
 --- 
 
-# Introduction 
+#Introduction 
 
   Within recent decades groundwater research has increased in significance due to 
 its influential interactions with surface water. The 
@@ -40,7 +40,7 @@ and decrease harm to organisms who may ingest contaminated water
 
 
 
-## Research Question
+##Research Question
 
 How is climate change affecting ground water levels that can influence base flows 
 in surface water discharge along Hot Creek near Mammoth Lakes, California? Specifically,

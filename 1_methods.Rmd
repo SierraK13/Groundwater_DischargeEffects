@@ -38,7 +38,7 @@ climate changes to groundwater and surface water quantities.
 
 ## Watershed Delineation
 
-```{r}
+```{r, fig.cap= "Figure 1. The watershed delineation of the surface water reference gauge near Mammoth Lakes, California." }
 
 mapviewOptions(fgb = FALSE)
 
@@ -52,3 +52,7 @@ CAwatershed <- st_read('MammothCA.geojson') %>% dplyr::filter(id== 'globalwaters
 mapview(CAwatershed) + mapview(site_coords_CA1)
 ```
 
+The delineated watershed shows the area that Hot Creek receives its water inputs. 
+The surface water gauge is Hot Flume near Mammoth Lakes USGS 10265150. The 
+ground water monitor being used is upstream of the surface water monitor listed 
+as USGS 373930118491602. 
