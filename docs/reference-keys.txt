@@ -13,3 +13,4 @@ data-acquisition
 attributes
 attribute-analysis
 statistical-trend-analysis
+discussion
