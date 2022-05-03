@@ -11,7 +11,9 @@ output: html_document
 Ground water results stuff
 
 interpreting this positive relationship however it means that the ground water depths
-are getting deeper and are actually losing water.  
+are getting deeper and are actually losing water. 
+
+
 
 SW discharge
 

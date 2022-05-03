@@ -1,5 +1,5 @@
 ---
-title: "Final Final"
+title: "GW and SW"
 author: "Sierra Klemme"
 site: bookdown::bookdown_site
 documentclass: book
