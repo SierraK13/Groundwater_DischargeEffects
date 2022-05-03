@@ -47,7 +47,11 @@ in surface water discharge along Hot Creek near Mammoth Lakes, California? Speci
 the attributes in consideration are temperature, precipitation, ground water 
 depth, and surface water discharge raters. 
 
+or
 
+How are groundwater levels affected by climate variables such as temperature and
+precipitation? Will the climate change trends alter the relationship between 
+groundwater and surface water discharge during baseflow months along Hot Creek near Mammoth Lakes, California?
 
 <!--chapter:end:index.Rmd-->
 
@@ -87,7 +91,33 @@ This particular site where factors such as climate, temperature, groundwater
 levels, and discharge can be monitored will allow this analysis to compare 
 climate changes to groundwater and surface water quantities. 
 
-***also put in what methods used to find results 
+## Analysis Methods
+
+  Since this report was multifaceted there were many types of data that needed
+to be collected. Data for groundwater and surface water were pulled from USGS monitors
+and the climate data was retrieved from (uh??) The data was filtered to only 
+obtain ground water depth in feet, surface water discharge in cubic feet per
+second, temperature in Fahrenheit, and precipitation in millimeters starting on 
+January 19, 1992 to April 6, 2022. General trends for groundwater 
+levels and surface water discharge rates to analyze on their own and then 
+by adjusting scales the two variable were compared on the same graph to show
+any relations between the two attributes. Once there was a general understanding
+of the GW and SW relation the climate variables were introduced. Temperature and 
+precipitation were graphed together to show their correlation and allow for other
+interpretations to be made. Temperature and precipitation were then compared to
+ground water depths to show trends between changing climate variables and the 
+variability of the water table. To further analyze how surface discharge is affected 
+the baseflow moths of July through October were compared to show ranges of 
+discharge and infer water sources for the causes of large or minimal ranges between 
+the months. While some trends were evident through the figures it was important
+to objectify those relations by using statistical test to quantify the correlations.
+Non-parametric tests such as the Mann-Kendall and Sens Slope were used to greater
+support or contradict assumptions made from the figures. These tests also denoted
+the strength of the relationship between the various variables. These tests were
+used to analyze the significance of surface water and ground water changes, the 
+correlation between groundwater and surface water, the baseflow ranges, and 
+temperature changes throughout the study period. Using 
+
 
 ## Watershed Delineation
 
@@ -279,6 +309,9 @@ layout(matrix(c(1,2), 1, 2, byrow = TRUE)) +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Avrg_T, col="lightsalmon3", pch = 16, main="Temperature", ylab = "Average Temperature (F)", xlab = "Water Depth (ft)") +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Precip, col="darkslategray2", pch = 16, main="Precipitation", xlab = "Water Depth (ft)", ylab = "Precipitation (mm)") 
   
+#can interpret affects of t and p and then make prediction of how these variables affect GW and correlate that to the relation between gw and sw
+
+#could have made a graph with double axis of t p gw
 ```
 
 Ground water recharge is dependent on many factors but two climate variable that
@@ -320,6 +353,7 @@ ggplot(q_base, aes( x= year, y= q_mean)) +
   xlab('Water Year')+
   scale_color_discrete()
 
+#shows variability between baseflow months over years, sometimes similar other times big difference between july and october 
 ```
 
 Baseflow discharge rates are generally supported by ground water sources. The 

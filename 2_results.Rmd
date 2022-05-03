@@ -165,6 +165,9 @@ layout(matrix(c(1,2), 1, 2, byrow = TRUE)) +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Avrg_T, col="lightsalmon3", pch = 16, main="Temperature", ylab = "Average Temperature (F)", xlab = "Water Depth (ft)") +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Precip, col="darkslategray2", pch = 16, main="Precipitation", xlab = "Water Depth (ft)", ylab = "Precipitation (mm)") 
   
+#can interpret affects of t and p and then make prediction of how these variables affect GW and correlate that to the relation between gw and sw
+
+#could have made a graph with double axis of t p gw
 ```
 
 Ground water recharge is dependent on many factors but two climate variable that
@@ -206,6 +209,7 @@ ggplot(q_base, aes( x= year, y= q_mean)) +
   xlab('Water Year')+
   scale_color_discrete()
 
+#shows variability between baseflow months over years, sometimes similar other times big difference between july and october 
 ```
 
 Baseflow discharge rates are generally supported by ground water sources. The 

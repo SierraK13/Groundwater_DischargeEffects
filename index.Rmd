@@ -47,4 +47,8 @@ in surface water discharge along Hot Creek near Mammoth Lakes, California? Speci
 the attributes in consideration are temperature, precipitation, ground water 
 depth, and surface water discharge raters. 
 
+or
 
+How are groundwater levels affected by climate variables such as temperature and
+precipitation? Will the climate change trends alter the relationship between 
+groundwater and surface water discharge during baseflow months along Hot Creek near Mammoth Lakes, California?
