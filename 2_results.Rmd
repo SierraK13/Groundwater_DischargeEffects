@@ -134,10 +134,10 @@ t_p <- ggplot() +
   scale_color_brewer(guide = "legend")
 
 t_p + scale_y_continuous(name = "Temp (F)" , sec.axis = sec_axis(trans=~./10 , name= "Precip (mm)"))
-                                             breaks = c(0,1,2,3,4,5) + 
-                                            breaks = c(0,20,40,50) +
-  theme_bw()+ 
-  ggtitle("Average Annual Temp and Precip")
+                                            # breaks = c(0,1,2,3,4,5) + 
+                                            #breaks = c(0,20,40,50) +
+  theme_bw()#+ 
+  #ggtitle("Average Annual Temp and Precip")
 
 #how to put in legend
 ```
@@ -148,7 +148,7 @@ precipitation over the studied time frame.Temperature and precipitation have
 correlate to GW and SW because of they're influence on processes such as water 
 recharge amounts and evaporation. 
 
-**Look at data why is it a sharp decline at end of graph
+#Look at data why is it a sharp decline at end of graph
 
 GW, Temp, Precip
 
@@ -197,7 +197,7 @@ q_month_means <- q_ca %>%
 Discharge Trends for baseflow months
 
 ```{r, fig.cap= "Figure 7. Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." }
-#**how to edit legend!!
+#how to edit legend!!
   
 q_base <- q_month_means %>% 
   filter(month %in% c('7','8','9','10'))
@@ -259,7 +259,7 @@ mk.test(log10(test$Avrg_T))
 
 sens.slope(test$Avrg_T)
 
-**not signigicant change of increasing temp by 0.05 degrees each year
+#not signigicant change of increasing temp by 0.05 degrees each year
 
 ```
 
