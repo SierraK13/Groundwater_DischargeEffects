@@ -4,6 +4,8 @@ fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-12
+introduction
+research-question
 methods
 site-description
 analysis-methods
