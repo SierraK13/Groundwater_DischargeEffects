@@ -5,3 +5,39 @@ date: "5/2/2022"
 output: html_document
 ---
 
+Ground water results stuff
+
+interpreting this positive relationship however it means that the ground water depths
+are getting deeper and are actually losing water.  
+
+SW discharge
+
+According to the discharge values
+from the graph above it can be inferred that this is a moderate stream but is on
+average a smaller stream
+
+GW and SW
+
+Groundwater has proven to affect surface water discharge levels.
+During baseflows it is 
+known that ground water can be a continuous source when there is less precipitation
+events.
+
+T & P
+
+Climate attributes are known to vary and have affects on ground water levels and 
+surface water discharge rates.
+Temperature and precipitation have correlate to GW and SW because of they're influence on processes such as water 
+recharge amounts and evaporation. 
+
+T&P&GW
+
+By comparing ground water to these climate 
+characteristics there can be further analysis on what types of trends can be predicted
+in times of climate change.
+
+monthly Q
+
+The 
+differences in potentials between a low flowing stream and groundwater allows
+for groundwater to rise back up into the stream. (Find paper that says this better)

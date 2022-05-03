@@ -1,3 +1,9 @@
+---
+title: "results"
+author: "Sierra Klemme"
+date: "5/2/2022"
+output: html_document
+---
 # Results  
 
 ```{r, include=FALSE}
@@ -6,7 +12,7 @@ library(dataRetrieval)
 library(tidyverse)
 library(trend)
 library(lubridate)
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 
 ```
 
@@ -27,7 +33,6 @@ q_ca <- readNWISdv(siteNumbers = site_ca,
   select(-site_no)
 
 ```
-
 
 ```{r, include=FALSE}
 ##Ground water data
@@ -51,7 +56,7 @@ mam_climate <- read_csv('Date_Mammoth_climate.csv')
 
 Groundwater Depth 
 
-```{r, fig.width = 6,fig.height=7, fig.cap= "Figure 2. Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes."}
+```{r, fig.width = 6,fig.height=7, fig.cap= "Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes."}
 ggplot(gw_depth, aes(x = Date, y = water_depth)) + 
   geom_line(color = 'slateblue2') + 
   ylab('Ground Water Depth (feet)') +
@@ -63,31 +68,28 @@ ggplot(gw_depth, aes(x = Date, y = water_depth)) +
 Groundwater depths near Mammoth Lakes, California have been progressively getting
 deeper since 1992. The graph shows the greatest decline happening between 2000 and
 200??. There is one trend after 2005?? that shows an increase in the water table 
-but after that spike in ground water recharge the depth goes down again. Overall
-there is a positive relationship between ground water depths and time, interpreting 
-this positive relationship however it means that the ground water depths are 
-getting deeper and are actually loseing water. 
+but after that spike in ground water recharge the depth goes down again significantly.
+Overall there is a positive relationship between ground water depths and time.
 
 Surface Discharge 
 
-```{r, fig.cap= "Figure 3. Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022."}
+```{r, fig.cap= "Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022."}
 ggplot(q_ca, aes(x = Date, y = q_cfs)) + 
   geom_line(color = 'paleturquoise') + 
   ylab('Q (cfs)') +
   theme_bw()
 ```
 
-Discharge is influenced by many outside sources. According to the discharge values
-from the graph above it can be inferred that this is a moderate stream but is on
-average a smaller stream. The rates range from 30 cubic feet per second (cfs) to 
-a little over 300 cfs. With the exception of these occasional spikes the river
-seems to show decreasing annual ranges in discharge. 
+Discharge is influenced by many outside sources. The outputs along Hot Creek
+range from 30 cubic feet per second (cfs) to a little over 300 cfs. With the 
+exception of the occasional spikes around 300 cfs the river shows a decreasing 
+trend in annual ranges of discharge. 
 
 ## Attribute Analysis 
 
 GW and SW Long
 
-```{r, fig.cap= "Figure 4. Groundwater has proven to affect surface water discharge levels. Here a logistical comparison of groundwater and surface water discharge trends is shown over the water years through 1992 to 2022. The double y-axix allows the two variable to be compared by annual averages."}
+```{r, fig.cap= "Here a logistical comparison of groundwater and surface water discharge trends are shown for water years 1992 to 2022."}
 
 sw_gw <- left_join(gw_depth, q_ca, by = "Date")
 
@@ -103,14 +105,14 @@ sw_gw_graph + scale_y_continuous(sec.axis = sec_axis(~./3)) +
 ```
 
 Comparing ground water depths and surface water discharge rates can help show 
-how surface water can be affected by ground water levels. During baseflows it is 
-known that ground water can be a continuous source when there is less precipitation
-events. The two variables are on different scales but a small correlation can be seen
-between increasing water table levels and discharge peaks. 
+how surface water can be affected by ground water levels. The double y-axis allows 
+the two variable to be compared by annual averages. The two variables are on 
+different scales but a small correlation can be seen between increasing water 
+table levels and discharge peaks. 
 
 Temperature and Precipitation 
 
-```{r, fig.cap= "Figure 5. Above shows the comparison between temperature (light brown) and precipitation (light blue). The data is the same time frams as the GW and SW starting in 1992 to 2022." }
+```{r, fig.cap= "Above shows the comparison between temperature and precipitation. The data is the same time frame as the ground water and surfacewater data starting in 1992 to 2022."} 
 
 t_annual <- mam_climate %>%
   dplyr::mutate(month = month(Date),
@@ -133,26 +135,29 @@ t_p <- ggplot() +
   xlab("Water Year") +
   scale_color_brewer(guide = "legend")
 
-t_p + scale_y_continuous(name = "Temp (F)" , sec.axis = sec_axis(trans=~./10 , name= "Precip (mm)"))
-                                            # breaks = c(0,1,2,3,4,5) + 
-                                            #breaks = c(0,20,40,50) +
-  theme_bw()#+ 
-  #ggtitle("Average Annual Temp and Precip")
+t_p + scale_y_continuous(name = "Temp (F)" , sec.axis = sec_axis(trans=~./10 , name= "Precip (mm)")) +
+  theme_bw()
+                                            
 
 #how to put in legend
 ```
 
-Climate attributes also have great affects on ground water levels and surface
-water discharge rates. This graph compares the trends of temperature and 
-precipitation over the studied time frame.Temperature and precipitation have
-correlate to GW and SW because of they're influence on processes such as water 
-recharge amounts and evaporation. 
+This graph compares the trends of temperature and precipitation over the studied 
+time frame. The temperature has a consitent pattern with no major spikes in 
+either decreasing or increasing temperatures, however it can be noted that there
+is a general upward trend in the temperature data. Precipitation is much more
+variable and has significant ranges over the years. Looking at the graph some
+correlation between the two variables can be seen where there is a dip in temperature
+precipitation shows and rise and when there is an increase in temperature there
+is a significant decrease in precipitation such as the section of data between 
+2010 and 2015. 
+
 
 #Look at data why is it a sharp decline at end of graph
 
 GW, Temp, Precip
 
-```{r, fig.cap= "Figure 6. Ground water levels compared to temperature and precipitation climate variables."}
+```{r, fig.cap= "Ground water levels compared to temperature and precipitation climate variables."}
 gw_annual <- gw_depth %>%
   dplyr::mutate(month = month(Date),
                 year = year(Date)) %>%
@@ -173,12 +178,14 @@ plot(gw_tp_annual$water_depth, gw_tp_annual$Precip, col="darkslategray2", pch = 
 Ground water recharge is dependent on many factors but two climate variable that
 can influence ground water depth is temperature and precipitation. Comparing the
 two variable against the water table level allows for a relationship to be interpreted.
-Based on the graphs there is allegedly a slightly positive trend between temperature 
-and ground water with some outlying points. Precipitation and ground water do not
-distinctly show any trends from the graph so a statistical analysis will be needed
-to better understand the relation. By comparing ground water to these climate 
-characteristics there can be further analysis on what types of trends can be predicted
-in times of climate change.
+Based on the graphs there is allegedly a positive trend between temperature 
+and ground water with some outlying points. Water depth is shown to be increasing
+as temperature also increases. Precipitation and ground water do not show any 
+distinct trends from the graph so a statistical analysis will be needed
+to better understand the relation. The extreme points on the precipitation graph
+do show some assumptions of when there is high amounts of precipitation the ground
+water depth is less and when there is minimal precipitation the water table depth
+tends to be deeper. 
 
 
 Monthly Water Trends
@@ -196,7 +203,7 @@ q_month_means <- q_ca %>%
 
 Discharge Trends for baseflow months
 
-```{r, fig.cap= "Figure 7. Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." }
+```{r, fig.cap= "Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." }
 #how to edit legend!!
   
 q_base <- q_month_means %>% 
@@ -212,13 +219,15 @@ ggplot(q_base, aes( x= year, y= q_mean)) +
 #shows variability between baseflow months over years, sometimes similar other times big difference between july and october 
 ```
 
-Baseflow discharge rates are generally supported by ground water sources. The 
-differences in potentials between a low flowing stream and groundwater allows
-for groundwater to rise back up into the stream. (Find paper that says this better)
-The graph shows a typical monthly trend how surface water discharges decreases 
+Baseflow discharge rates are generally supported by ground water sources. 
+The graph shows a typical monthly trend where surface water discharges decreases 
 in months further away from snow melt and summer rain storms. The latest month
 of October never surpasses 70 cfs but July has an extremely wide range of discharge
-values over the study period. 
+values over the study period. Overall the earlier months have higher discharge 
+values than the later months. Some years there are significant differences between
+each of the months such as the data from around 1995 and other years there is 
+a minimal change in discharge between the baseflow months such as the data around
+2020.
 
 ## Statistical Trend Analysis
 

@@ -213,35 +213,32 @@ div.csl-indent {
 <span id="cb4-3"><a href="results.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Ground Water Depth (feet)&#39;</span>) <span class="sc">+</span></span>
 <span id="cb4-4"><a href="results.html#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-6-1.png" alt="Figure 2. Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes." width="576" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-6-1.png" alt="Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes." width="576" />
 <p class="caption">
-Figure 2.1: Figure 2. Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes.
+Figure 2.1: Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes.
 </p>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="results.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#how can i make this an interacitve graph</span></span></code></pre></div>
 <p>Groundwater depths near Mammoth Lakes, California have been progressively getting
 deeper since 1992. The graph shows the greatest decline happening between 2000 and
 200??. There is one trend after 2005?? that shows an increase in the water table
-but after that spike in ground water recharge the depth goes down again. Overall
-there is a positive relationship between ground water depths and time, interpreting
-this positive relationship however it means that the ground water depths are
-getting deeper and are actually loseing water.</p>
+but after that spike in ground water recharge the depth goes down again significantly.
+Overall there is a positive relationship between ground water depths and time.</p>
 <p>Surface Discharge</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="results.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_ca, <span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> q_cfs)) <span class="sc">+</span> </span>
 <span id="cb6-2"><a href="results.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&#39;paleturquoise&#39;</span>) <span class="sc">+</span> </span>
 <span id="cb6-3"><a href="results.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>) <span class="sc">+</span></span>
 <span id="cb6-4"><a href="results.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-7-1.png" alt="Figure 3. Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022." width="672" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-7-1.png" alt="Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022." width="672" />
 <p class="caption">
-Figure 2.2: Figure 3. Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022.
+Figure 2.2: Represented above is the daily annual discharge showing the rates for water years between 1992 to 2022.
 </p>
 </div>
-<p>Discharge is influenced by many outside sources. According to the discharge values
-from the graph above it can be inferred that this is a moderate stream but is on
-average a smaller stream. The rates range from 30 cubic feet per second (cfs) to
-a little over 300 cfs. With the exception of these occasional spikes the river
-seems to show decreasing annual ranges in discharge.</p>
+<p>Discharge is influenced by many outside sources. The outputs along Hot Creek
+range from 30 cubic feet per second (cfs) to a little over 300 cfs. With the
+exception of the occasional spikes around 300 cfs the river shows a decreasing
+trend in annual ranges of discharge.</p>
 </div>
 <div id="attribute-analysis" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Attribute Analysis</h2>
@@ -257,543 +254,126 @@ seems to show decreasing annual ranges in discharge.</p>
 <span id="cb7-9"><a href="results.html#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
 <span id="cb7-10"><a href="results.html#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Discharge (cfs)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb7-11"><a href="results.html#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Date&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-8-1.png" alt="Figure 4. Groundwater has proven to affect surface water discharge levels. Here a logistical comparison of groundwater and surface water discharge trends is shown over the water years through 1992 to 2022. The double y-axix allows the two variable to be compared by annual averages." width="672" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-8-1.png" alt="Here a logistical comparison of groundwater and surface water discharge trends are shown for water years 1992 to 2022." width="672" />
 <p class="caption">
-Figure 2.3: Figure 4. Groundwater has proven to affect surface water discharge levels. Here a logistical comparison of groundwater and surface water discharge trends is shown over the water years through 1992 to 2022. The double y-axix allows the two variable to be compared by annual averages.
+Figure 2.3: Here a logistical comparison of groundwater and surface water discharge trends are shown for water years 1992 to 2022.
 </p>
 </div>
 <p>Comparing ground water depths and surface water discharge rates can help show
-how surface water can be affected by ground water levels. During baseflows it is
-known that ground water can be a continuous source when there is less precipitation
-events. The two variables are on different scales but a small correlation can be seen
-between increasing water table levels and discharge peaks.</p>
+how surface water can be affected by ground water levels. The double y-axis allows
+the two variable to be compared by annual averages. The two variables are on
+different scales but a small correlation can be seen between increasing water
+table levels and discharge peaks.</p>
 <p>Temperature and Precipitation</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="results.html#cb9-1" aria-hidden="true" tabindex="-1"></a>t_annual <span class="ot">&lt;-</span> mam_climate <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="results.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
-<span id="cb9-3"><a href="results.html#cb9-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="results.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="results.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Avrg_T =</span> <span class="fu">mean</span>(Avrg_T, <span class="at">na.rm =</span> T)) </span>
-<span id="cb9-6"><a href="results.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="results.html#cb9-7" aria-hidden="true" tabindex="-1"></a>p_annual <span class="ot">&lt;-</span> mam_climate <span class="sc">%&gt;%</span></span>
-<span id="cb9-8"><a href="results.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
-<span id="cb9-9"><a href="results.html#cb9-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-10"><a href="results.html#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
-<span id="cb9-11"><a href="results.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Precip =</span> <span class="fu">mean</span>(Precip, <span class="at">na.rm =</span> T))</span>
-<span id="cb9-12"><a href="results.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="results.html#cb9-13" aria-hidden="true" tabindex="-1"></a>t_p_annual <span class="ot">&lt;-</span> <span class="fu">cbind</span>(t_annual, p_annual) <span class="sc">%&gt;%</span></span>
-<span id="cb9-14"><a href="results.html#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">3</span>)</span>
-<span id="cb9-15"><a href="results.html#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="results.html#cb9-16" aria-hidden="true" tabindex="-1"></a>t_p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-17"><a href="results.html#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> t_p_annual, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span> Avrg_T), <span class="at">color =</span> <span class="st">&#39;lightsalmon3&#39;</span>) <span class="sc">+</span></span>
-<span id="cb9-18"><a href="results.html#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> t_p_annual, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span>Precip<span class="sc">*</span><span class="dv">10</span>), <span class="at">color =</span> <span class="st">&#39;darkslategray2&#39;</span>) <span class="sc">+</span></span>
-<span id="cb9-19"><a href="results.html#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Water Year&quot;</span>) <span class="sc">+</span></span>
-<span id="cb9-20"><a href="results.html#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">guide =</span> <span class="st">&quot;legend&quot;</span>)</span>
-<span id="cb9-21"><a href="results.html#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="results.html#cb9-22" aria-hidden="true" tabindex="-1"></a>t_p <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Temp (F)&quot;</span> , <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="at">trans=</span><span class="sc">~</span>.<span class="sc">/</span><span class="dv">10</span> , <span class="at">name=</span> <span class="st">&quot;Precip (mm)&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="results.html#cb8-1" aria-hidden="true" tabindex="-1"></a>t_annual <span class="ot">&lt;-</span> mam_climate <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="results.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
+<span id="cb8-3"><a href="results.html#cb8-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="results.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="results.html#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Avrg_T =</span> <span class="fu">mean</span>(Avrg_T, <span class="at">na.rm =</span> T)) </span>
+<span id="cb8-6"><a href="results.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="results.html#cb8-7" aria-hidden="true" tabindex="-1"></a>p_annual <span class="ot">&lt;-</span> mam_climate <span class="sc">%&gt;%</span></span>
+<span id="cb8-8"><a href="results.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
+<span id="cb8-9"><a href="results.html#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-10"><a href="results.html#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
+<span id="cb8-11"><a href="results.html#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Precip =</span> <span class="fu">mean</span>(Precip, <span class="at">na.rm =</span> T))</span>
+<span id="cb8-12"><a href="results.html#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="results.html#cb8-13" aria-hidden="true" tabindex="-1"></a>t_p_annual <span class="ot">&lt;-</span> <span class="fu">cbind</span>(t_annual, p_annual) <span class="sc">%&gt;%</span></span>
+<span id="cb8-14"><a href="results.html#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">3</span>)</span>
+<span id="cb8-15"><a href="results.html#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="results.html#cb8-16" aria-hidden="true" tabindex="-1"></a>t_p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-17"><a href="results.html#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> t_p_annual, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span> Avrg_T), <span class="at">color =</span> <span class="st">&#39;lightsalmon3&#39;</span>) <span class="sc">+</span></span>
+<span id="cb8-18"><a href="results.html#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> t_p_annual, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span>Precip<span class="sc">*</span><span class="dv">10</span>), <span class="at">color =</span> <span class="st">&#39;darkslategray2&#39;</span>) <span class="sc">+</span></span>
+<span id="cb8-19"><a href="results.html#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Water Year&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-20"><a href="results.html#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">guide =</span> <span class="st">&quot;legend&quot;</span>)</span>
+<span id="cb8-21"><a href="results.html#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="results.html#cb8-22" aria-hidden="true" tabindex="-1"></a>t_p <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Temp (F)&quot;</span> , <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="at">trans=</span><span class="sc">~</span>.<span class="sc">/</span><span class="dv">10</span> , <span class="at">name=</span> <span class="st">&quot;Precip (mm)&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb8-23"><a href="results.html#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-9-1.png" alt="Figure 5. Above shows the comparison between temperature (light brown) and precipitation (light blue). The data is the same time frams as the GW and SW starting in 1992 to 2022." width="672" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-9-1.png" alt="Above shows the comparison between temperature and precipitation. The data is the same time frame as the ground water and surfacewater data starting in 1992 to 2022." width="672" />
 <p class="caption">
-Figure 2.4: Figure 5. Above shows the comparison between temperature (light brown) and precipitation (light blue). The data is the same time frams as the GW and SW starting in 1992 to 2022.
+Figure 2.4: Above shows the comparison between temperature and precipitation. The data is the same time frame as the ground water and surfacewater data starting in 1992 to 2022.
 </p>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="results.html#cb10-1" aria-hidden="true" tabindex="-1"></a>                                            <span class="co"># breaks = c(0,1,2,3,4,5) + </span></span>
-<span id="cb10-2"><a href="results.html#cb10-2" aria-hidden="true" tabindex="-1"></a>                                            <span class="co">#breaks = c(0,20,40,50) +</span></span>
-<span id="cb10-3"><a href="results.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="co">#+ </span></span></code></pre></div>
-<pre><code>## List of 93
-##  $ line                      :List of 6
-##   ..$ colour       : chr &quot;black&quot;
-##   ..$ size         : num 0.5
-##   ..$ linetype     : num 1
-##   ..$ lineend      : chr &quot;butt&quot;
-##   ..$ arrow        : logi FALSE
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
-##  $ rect                      :List of 5
-##   ..$ fill         : chr &quot;white&quot;
-##   ..$ colour       : chr &quot;black&quot;
-##   ..$ size         : num 0.5
-##   ..$ linetype     : num 1
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ text                      :List of 11
-##   ..$ family       : chr &quot;&quot;
-##   ..$ face         : chr &quot;plain&quot;
-##   ..$ colour       : chr &quot;black&quot;
-##   ..$ size         : num 11
-##   ..$ hjust        : num 0.5
-##   ..$ vjust        : num 0.5
-##   ..$ angle        : num 0
-##   ..$ lineheight   : num 0.9
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : logi FALSE
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ title                     : NULL
-##  $ aspect.ratio              : NULL
-##  $ axis.title                : NULL
-##  $ axis.title.x              :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 1
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 2.75points 0points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.title.x.top          :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 0
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 2.75points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.title.x.bottom       : NULL
-##  $ axis.title.y              :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 1
-##   ..$ angle        : num 90
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 2.75points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.title.y.left         : NULL
-##  $ axis.title.y.right        :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 0
-##   ..$ angle        : num -90
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 2.75points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.text                 :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : chr &quot;grey30&quot;
-##   ..$ size         : &#39;rel&#39; num 0.8
-##   ..$ hjust        : NULL
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.text.x               :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 1
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 2.2points 0points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.text.x.top           :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : num 0
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 2.2points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.text.x.bottom        : NULL
-##  $ axis.text.y               :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : num 1
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 2.2points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.text.y.left          : NULL
-##  $ axis.text.y.right         :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : num 0
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 2.2points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ axis.ticks                :List of 6
-##   ..$ colour       : chr &quot;grey20&quot;
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ lineend      : NULL
-##   ..$ arrow        : logi FALSE
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
-##  $ axis.ticks.x              : NULL
-##  $ axis.ticks.x.top          : NULL
-##  $ axis.ticks.x.bottom       : NULL
-##  $ axis.ticks.y              : NULL
-##  $ axis.ticks.y.left         : NULL
-##  $ axis.ticks.y.right        : NULL
-##  $ axis.ticks.length         : &#39;simpleUnit&#39; num 2.75points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ axis.ticks.length.x       : NULL
-##  $ axis.ticks.length.x.top   : NULL
-##  $ axis.ticks.length.x.bottom: NULL
-##  $ axis.ticks.length.y       : NULL
-##  $ axis.ticks.length.y.left  : NULL
-##  $ axis.ticks.length.y.right : NULL
-##  $ axis.line                 : list()
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
-##  $ axis.line.x               : NULL
-##  $ axis.line.x.top           : NULL
-##  $ axis.line.x.bottom        : NULL
-##  $ axis.line.y               : NULL
-##  $ axis.line.y.left          : NULL
-##  $ axis.line.y.right         : NULL
-##  $ legend.background         :List of 5
-##   ..$ fill         : NULL
-##   ..$ colour       : logi NA
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ legend.margin             : &#39;margin&#39; num [1:4] 5.5points 5.5points 5.5points 5.5points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ legend.spacing            : &#39;simpleUnit&#39; num 11points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ legend.spacing.x          : NULL
-##  $ legend.spacing.y          : NULL
-##  $ legend.key                :List of 5
-##   ..$ fill         : chr &quot;white&quot;
-##   ..$ colour       : logi NA
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ legend.key.size           : &#39;simpleUnit&#39; num 1.2lines
-##   ..- attr(*, &quot;unit&quot;)= int 3
-##  $ legend.key.height         : NULL
-##  $ legend.key.width          : NULL
-##  $ legend.text               :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : &#39;rel&#39; num 0.8
-##   ..$ hjust        : NULL
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ legend.text.align         : NULL
-##  $ legend.title              :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : num 0
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ legend.title.align        : NULL
-##  $ legend.position           : chr &quot;right&quot;
-##  $ legend.direction          : NULL
-##  $ legend.justification      : chr &quot;center&quot;
-##  $ legend.box                : NULL
-##  $ legend.box.just           : NULL
-##  $ legend.box.margin         : &#39;margin&#39; num [1:4] 0cm 0cm 0cm 0cm
-##   ..- attr(*, &quot;unit&quot;)= int 1
-##  $ legend.box.background     : list()
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
-##  $ legend.box.spacing        : &#39;simpleUnit&#39; num 11points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ panel.background          :List of 5
-##   ..$ fill         : chr &quot;white&quot;
-##   ..$ colour       : logi NA
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ panel.border              :List of 5
-##   ..$ fill         : logi NA
-##   ..$ colour       : chr &quot;grey20&quot;
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ panel.spacing             : &#39;simpleUnit&#39; num 5.5points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ panel.spacing.x           : NULL
-##  $ panel.spacing.y           : NULL
-##  $ panel.grid                :List of 6
-##   ..$ colour       : chr &quot;grey92&quot;
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ lineend      : NULL
-##   ..$ arrow        : logi FALSE
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
-##  $ panel.grid.major          : NULL
-##  $ panel.grid.minor          :List of 6
-##   ..$ colour       : NULL
-##   ..$ size         : &#39;rel&#39; num 0.5
-##   ..$ linetype     : NULL
-##   ..$ lineend      : NULL
-##   ..$ arrow        : logi FALSE
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
-##  $ panel.grid.major.x        : NULL
-##  $ panel.grid.major.y        : NULL
-##  $ panel.grid.minor.x        : NULL
-##  $ panel.grid.minor.y        : NULL
-##  $ panel.ontop               : logi FALSE
-##  $ plot.background           :List of 5
-##   ..$ fill         : NULL
-##   ..$ colour       : chr &quot;white&quot;
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ plot.title                :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : &#39;rel&#39; num 1.2
-##   ..$ hjust        : num 0
-##   ..$ vjust        : num 1
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 5.5points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ plot.title.position       : chr &quot;panel&quot;
-##  $ plot.subtitle             :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : num 0
-##   ..$ vjust        : num 1
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 5.5points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ plot.caption              :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : &#39;rel&#39; num 0.8
-##   ..$ hjust        : num 1
-##   ..$ vjust        : num 1
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 5.5points 0points 0points 0points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ plot.caption.position     : chr &quot;panel&quot;
-##  $ plot.tag                  :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : &#39;rel&#39; num 1.2
-##   ..$ hjust        : num 0.5
-##   ..$ vjust        : num 0.5
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ plot.tag.position         : chr &quot;topleft&quot;
-##  $ plot.margin               : &#39;margin&#39; num [1:4] 5.5points 5.5points 5.5points 5.5points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ strip.background          :List of 5
-##   ..$ fill         : chr &quot;grey85&quot;
-##   ..$ colour       : chr &quot;grey20&quot;
-##   ..$ size         : NULL
-##   ..$ linetype     : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
-##  $ strip.background.x        : NULL
-##  $ strip.background.y        : NULL
-##  $ strip.placement           : chr &quot;inside&quot;
-##  $ strip.text                :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : chr &quot;grey10&quot;
-##   ..$ size         : &#39;rel&#39; num 0.8
-##   ..$ hjust        : NULL
-##   ..$ vjust        : NULL
-##   ..$ angle        : NULL
-##   ..$ lineheight   : NULL
-##   ..$ margin       : &#39;margin&#39; num [1:4] 4.4points 4.4points 4.4points 4.4points
-##   .. ..- attr(*, &quot;unit&quot;)= int 8
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ strip.text.x              : NULL
-##  $ strip.text.y              :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : NULL
-##   ..$ angle        : num -90
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  $ strip.switch.pad.grid     : &#39;simpleUnit&#39; num 2.75points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ strip.switch.pad.wrap     : &#39;simpleUnit&#39; num 2.75points
-##   ..- attr(*, &quot;unit&quot;)= int 8
-##  $ strip.text.y.left         :List of 11
-##   ..$ family       : NULL
-##   ..$ face         : NULL
-##   ..$ colour       : NULL
-##   ..$ size         : NULL
-##   ..$ hjust        : NULL
-##   ..$ vjust        : NULL
-##   ..$ angle        : num 90
-##   ..$ lineheight   : NULL
-##   ..$ margin       : NULL
-##   ..$ debug        : NULL
-##   ..$ inherit.blank: logi TRUE
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
-##  - attr(*, &quot;class&quot;)= chr [1:2] &quot;theme&quot; &quot;gg&quot;
-##  - attr(*, &quot;complete&quot;)= logi TRUE
-##  - attr(*, &quot;validate&quot;)= logi TRUE</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="results.html#cb12-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggtitle(&quot;Average Annual Temp and Precip&quot;)</span></span>
-<span id="cb12-2"><a href="results.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="results.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#how to put in legend</span></span></code></pre></div>
-<p>Climate attributes also have great affects on ground water levels and surface
-water discharge rates. This graph compares the trends of temperature and
-precipitation over the studied time frame.Temperature and precipitation have
-correlate to GW and SW because of they’re influence on processes such as water
-recharge amounts and evaporation.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="results.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#how to put in legend</span></span></code></pre></div>
+<p>This graph compares the trends of temperature and precipitation over the studied
+time frame. The temperature has a consitent pattern with no major spikes in
+either decreasing or increasing temperatures, however it can be noted that there
+is a general upward trend in the temperature data. Precipitation is much more
+variable and has significant ranges over the years. Looking at the graph some
+correlation between the two variables can be seen where there is a dip in temperature
+precipitation shows and rise and when there is an increase in temperature there
+is a significant decrease in precipitation such as the section of data between
+2010 and 2015.</p>
 <p>#Look at data why is it a sharp decline at end of graph</p>
 <p>GW, Temp, Precip</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="results.html#cb13-1" aria-hidden="true" tabindex="-1"></a>gw_annual <span class="ot">&lt;-</span> gw_depth <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="results.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
-<span id="cb13-3"><a href="results.html#cb13-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
-<span id="cb13-4"><a href="results.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
-<span id="cb13-5"><a href="results.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">water_depth =</span> <span class="fu">mean</span>(water_depth, <span class="at">na.rm =</span> T)) </span>
-<span id="cb13-6"><a href="results.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="results.html#cb13-7" aria-hidden="true" tabindex="-1"></a>gw_tp_annual <span class="ot">&lt;-</span> <span class="fu">left_join</span>(gw_annual, t_p_annual)</span></code></pre></div>
-<pre><code>## Joining, by = &quot;year&quot;</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="results.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="dv">1</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="results.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gw_tp_annual<span class="sc">$</span>water_depth, gw_tp_annual<span class="sc">$</span>Avrg_T, <span class="at">col=</span><span class="st">&quot;lightsalmon3&quot;</span>, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">main=</span><span class="st">&quot;Temperature&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Average Temperature (F)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Water Depth (ft)&quot;</span>) <span class="sc">+</span></span>
-<span id="cb15-3"><a href="results.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gw_tp_annual<span class="sc">$</span>water_depth, gw_tp_annual<span class="sc">$</span>Precip, <span class="at">col=</span><span class="st">&quot;darkslategray2&quot;</span>, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">main=</span><span class="st">&quot;Precipitation&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Water Depth (ft)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Precipitation (mm)&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="results.html#cb10-1" aria-hidden="true" tabindex="-1"></a>gw_annual <span class="ot">&lt;-</span> gw_depth <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="results.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(Date),</span>
+<span id="cb10-3"><a href="results.html#cb10-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">year =</span> <span class="fu">year</span>(Date)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="results.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="results.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">water_depth =</span> <span class="fu">mean</span>(water_depth, <span class="at">na.rm =</span> T)) </span>
+<span id="cb10-6"><a href="results.html#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="results.html#cb10-7" aria-hidden="true" tabindex="-1"></a>gw_tp_annual <span class="ot">&lt;-</span> <span class="fu">left_join</span>(gw_annual, t_p_annual)</span>
+<span id="cb10-8"><a href="results.html#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="results.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="dv">1</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="results.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gw_tp_annual<span class="sc">$</span>water_depth, gw_tp_annual<span class="sc">$</span>Avrg_T, <span class="at">col=</span><span class="st">&quot;lightsalmon3&quot;</span>, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">main=</span><span class="st">&quot;Temperature&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Average Temperature (F)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Water Depth (ft)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-11"><a href="results.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gw_tp_annual<span class="sc">$</span>water_depth, gw_tp_annual<span class="sc">$</span>Precip, <span class="at">col=</span><span class="st">&quot;darkslategray2&quot;</span>, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">main=</span><span class="st">&quot;Precipitation&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Water Depth (ft)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Precipitation (mm)&quot;</span>) </span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-10-1.png" alt="Figure 6. Ground water levels compared to temperature and precipitation climate variables." width="672" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-10-1.png" alt="Ground water levels compared to temperature and precipitation climate variables." width="672" />
 <p class="caption">
-Figure 2.5: Figure 6. Ground water levels compared to temperature and precipitation climate variables.
+Figure 2.5: Ground water levels compared to temperature and precipitation climate variables.
 </p>
 </div>
 <pre><code>## integer(0)</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="results.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#can interpret affects of t and p and then make prediction of how these variables affect GW and correlate that to the relation between gw and sw</span></span>
-<span id="cb17-2"><a href="results.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="results.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#could have made a graph with double axis of t p gw</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="results.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#can interpret affects of t and p and then make prediction of how these variables affect GW and correlate that to the relation between gw and sw</span></span>
+<span id="cb12-2"><a href="results.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="results.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#could have made a graph with double axis of t p gw</span></span></code></pre></div>
 <p>Ground water recharge is dependent on many factors but two climate variable that
 can influence ground water depth is temperature and precipitation. Comparing the
 two variable against the water table level allows for a relationship to be interpreted.
-Based on the graphs there is allegedly a slightly positive trend between temperature
-and ground water with some outlying points. Precipitation and ground water do not
-distinctly show any trends from the graph so a statistical analysis will be needed
-to better understand the relation. By comparing ground water to these climate
-characteristics there can be further analysis on what types of trends can be predicted
-in times of climate change.</p>
+Based on the graphs there is allegedly a positive trend between temperature
+and ground water with some outlying points. Water depth is shown to be increasing
+as temperature also increases. Precipitation and ground water do not show any
+distinct trends from the graph so a statistical analysis will be needed
+to better understand the relation. The extreme points on the precipitation graph
+do show some assumptions of when there is high amounts of precipitation the ground
+water depth is less and when there is minimal precipitation the water table depth
+tends to be deeper.</p>
 <p>Monthly Water Trends</p>
 <p>Discharge Trends for baseflow months</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="results.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#how to edit legend!!</span></span>
-<span id="cb18-2"><a href="results.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-3"><a href="results.html#cb18-3" aria-hidden="true" tabindex="-1"></a>q_base <span class="ot">&lt;-</span> q_month_means <span class="sc">%&gt;%</span> </span>
-<span id="cb18-4"><a href="results.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;7&#39;</span>,<span class="st">&#39;8&#39;</span>,<span class="st">&#39;9&#39;</span>,<span class="st">&#39;10&#39;</span>))</span>
-<span id="cb18-5"><a href="results.html#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-6"><a href="results.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_base, <span class="fu">aes</span>( <span class="at">x=</span> year, <span class="at">y=</span> q_mean)) <span class="sc">+</span></span>
-<span id="cb18-7"><a href="results.html#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">factor</span>(month))) <span class="sc">+</span></span>
-<span id="cb18-8"><a href="results.html#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb18-9"><a href="results.html#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>) <span class="sc">+</span></span>
-<span id="cb18-10"><a href="results.html#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Water Year&#39;</span>)<span class="sc">+</span></span>
-<span id="cb18-11"><a href="results.html#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="results.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#how to edit legend!!</span></span>
+<span id="cb13-2"><a href="results.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-3"><a href="results.html#cb13-3" aria-hidden="true" tabindex="-1"></a>q_base <span class="ot">&lt;-</span> q_month_means <span class="sc">%&gt;%</span> </span>
+<span id="cb13-4"><a href="results.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;7&#39;</span>,<span class="st">&#39;8&#39;</span>,<span class="st">&#39;9&#39;</span>,<span class="st">&#39;10&#39;</span>))</span>
+<span id="cb13-5"><a href="results.html#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="results.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(q_base, <span class="fu">aes</span>( <span class="at">x=</span> year, <span class="at">y=</span> q_mean)) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="results.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">factor</span>(month))) <span class="sc">+</span></span>
+<span id="cb13-8"><a href="results.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb13-9"><a href="results.html#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Q (cfs)&#39;</span>) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="results.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Water Year&#39;</span>)<span class="sc">+</span></span>
+<span id="cb13-11"><a href="results.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>()</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="Final-Website-Project_files/figure-html/unnamed-chunk-12-1.png" alt="Figure 7. Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." width="672" />
+<img src="Final-Website-Project_files/figure-html/unnamed-chunk-12-1.png" alt="Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." width="672" />
 <p class="caption">
-Figure 2.6: Figure 7. Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown.
+Figure 2.6: Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown.
 </p>
 </div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="results.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#shows variability between baseflow months over years, sometimes similar other times big difference between july and october </span></span></code></pre></div>
-<p>Baseflow discharge rates are generally supported by ground water sources. The
-differences in potentials between a low flowing stream and groundwater allows
-for groundwater to rise back up into the stream. (Find paper that says this better)
-The graph shows a typical monthly trend how surface water discharges decreases
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="results.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#shows variability between baseflow months over years, sometimes similar other times big difference between july and october </span></span></code></pre></div>
+<p>Baseflow discharge rates are generally supported by ground water sources.
+The graph shows a typical monthly trend where surface water discharges decreases
 in months further away from snow melt and summer rain storms. The latest month
 of October never surpasses 70 cfs but July has an extremely wide range of discharge
-values over the study period.</p>
+values over the study period. Overall the earlier months have higher discharge
+values than the later months. Some years there are significant differences between
+each of the months such as the data from around 1995 and other years there is
+a minimal change in discharge between the baseflow months such as the data around
+2020.</p>
 </div>
 <div id="statistical-trend-analysis" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Statistical Trend Analysis</h2>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="results.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Surface Water Discharge </span></span>
-<span id="cb20-2"><a href="results.html#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="results.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(q_month_means<span class="sc">$</span>q_mean))</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="results.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Surface Water Discharge </span></span>
+<span id="cb15-2"><a href="results.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="results.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(q_month_means<span class="sc">$</span>q_mean))</span></code></pre></div>
 <pre><code>## 
 ##  Mann-Kendall trend test
 ## 
@@ -803,7 +383,7 @@ values over the study period.</p>
 ## sample estimates:
 ##             S          varS           tau 
 ## -1.223400e+04  5.292618e+06 -1.872374e-01</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="results.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(q_month_means<span class="sc">$</span>q_mean)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="results.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(q_month_means<span class="sc">$</span>q_mean)</span></code></pre></div>
 <pre><code>## 
 ##  Sen&#39;s slope
 ## 
@@ -815,9 +395,9 @@ values over the study period.</p>
 ## sample estimates:
 ## Sen&#39;s slope 
 ## -0.03807232</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="results.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Ground Water Level</span></span>
-<span id="cb24-2"><a href="results.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="results.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(gw_depth<span class="sc">$</span>water_depth))</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="results.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Ground Water Level</span></span>
+<span id="cb19-2"><a href="results.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="results.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(gw_depth<span class="sc">$</span>water_depth))</span></code></pre></div>
 <pre><code>## 
 ##  Mann-Kendall trend test
 ## 
@@ -827,7 +407,7 @@ values over the study period.</p>
 ## sample estimates:
 ##            S         varS          tau 
 ## 3.228767e+07 1.248222e+11 5.980977e-01</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="results.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(gw_depth<span class="sc">$</span>water_depth)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="results.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(gw_depth<span class="sc">$</span>water_depth)</span></code></pre></div>
 <pre><code>## 
 ##  Sen&#39;s slope
 ## 
@@ -839,9 +419,9 @@ values over the study period.</p>
 ## sample estimates:
 ##  Sen&#39;s slope 
 ## 0.0002796025</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="results.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Baseflow month trends</span></span>
-<span id="cb28-2"><a href="results.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="results.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(q_base<span class="sc">$</span>q_mean))</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="results.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Baseflow month trends</span></span>
+<span id="cb23-2"><a href="results.html#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="results.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(q_base<span class="sc">$</span>q_mean))</span></code></pre></div>
 <pre><code>## 
 ##  Mann-Kendall trend test
 ## 
@@ -851,7 +431,7 @@ values over the study period.</p>
 ## sample estimates:
 ##             S          varS           tau 
 ## -1.783000e+03  1.943657e+05 -2.497374e-01</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="results.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(q_base<span class="sc">$</span>q_mean)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="results.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(q_base<span class="sc">$</span>q_mean)</span></code></pre></div>
 <pre><code>## 
 ##  Sen&#39;s slope
 ## 
@@ -863,15 +443,15 @@ values over the study period.</p>
 ## sample estimates:
 ## Sen&#39;s slope 
 ##  -0.1851216</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="results.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Temperature</span></span>
-<span id="cb32-2"><a href="results.html#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="results.html#cb32-3" aria-hidden="true" tabindex="-1"></a>t_test <span class="ot">&lt;-</span> gw_tp_annual <span class="sc">%&gt;%</span></span>
-<span id="cb32-4"><a href="results.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Precip)</span>
-<span id="cb32-5"><a href="results.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-6"><a href="results.html#cb32-6" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> t_test <span class="sc">%&gt;%</span></span>
-<span id="cb32-7"><a href="results.html#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&lt;</span><span class="dv">2018</span>)</span>
-<span id="cb32-8"><a href="results.html#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-9"><a href="results.html#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(test<span class="sc">$</span>Avrg_T))</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="results.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Temperature</span></span>
+<span id="cb27-2"><a href="results.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="results.html#cb27-3" aria-hidden="true" tabindex="-1"></a>t_test <span class="ot">&lt;-</span> gw_tp_annual <span class="sc">%&gt;%</span></span>
+<span id="cb27-4"><a href="results.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Precip)</span>
+<span id="cb27-5"><a href="results.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="results.html#cb27-6" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> t_test <span class="sc">%&gt;%</span></span>
+<span id="cb27-7"><a href="results.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&lt;</span><span class="dv">2018</span>)</span>
+<span id="cb27-8"><a href="results.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="results.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mk.test</span>(<span class="fu">log10</span>(test<span class="sc">$</span>Avrg_T))</span></code></pre></div>
 <pre><code>## 
 ##  Mann-Kendall trend test
 ## 
@@ -881,7 +461,7 @@ values over the study period.</p>
 ## sample estimates:
 ##            S         varS          tau 
 ##   55.0000000 2058.3333333    0.1692308</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="results.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(test<span class="sc">$</span>Avrg_T)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="results.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sens.slope</span>(test<span class="sc">$</span>Avrg_T)</span></code></pre></div>
 <pre><code>## 
 ##  Sen&#39;s slope
 ## 
@@ -893,7 +473,7 @@ values over the study period.</p>
 ## sample estimates:
 ## Sen&#39;s slope 
 ##  0.04791318</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="results.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#not signigicant change of increasing temp by 0.05 degrees each year</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="results.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#not signigicant change of increasing temp by 0.05 degrees each year</span></span></code></pre></div>
 <p>Using a non-parametric statistical test such as the Mann-Kendall showed which
 variables were significantly changing and then using the Sen’s Slope test identified
 what type of trend the parameter was experiencing. For the analysis parameters
@@ -907,6 +487,31 @@ levels were significant but to a minuscule degree. The p-value was less than
 2.2e-16 with a positive slope of 0.00028. Temperature was the only parameter to
 give insignificant results with a p-value of 0.23 and a slope of 0.048.</p>
 
+<p>Ground water results stuff</p>
+<p>interpreting this positive relationship however it means that the ground water depths
+are getting deeper and are actually losing water.</p>
+<p>SW discharge</p>
+<p>According to the discharge values
+from the graph above it can be inferred that this is a moderate stream but is on
+average a smaller stream</p>
+<p>GW and SW</p>
+<p>Groundwater has proven to affect surface water discharge levels.
+During baseflows it is
+known that ground water can be a continuous source when there is less precipitation
+events.</p>
+<p>T &amp; P</p>
+<p>Climate attributes are known to vary and have affects on ground water levels and
+surface water discharge rates.
+Temperature and precipitation have correlate to GW and SW because of they’re influence on processes such as water
+recharge amounts and evaporation.</p>
+<p>T&amp;P&amp;GW</p>
+<p>By comparing ground water to these climate
+characteristics there can be further analysis on what types of trends can be predicted
+in times of climate change.</p>
+<p>monthly Q</p>
+<p>The
+differences in potentials between a low flowing stream and groundwater allows
+for groundwater to rise back up into the stream. (Find paper that says this better)</p>
 
 </div>
 </div>
