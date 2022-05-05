@@ -11,8 +11,13 @@ output: html_document
 library(dataRetrieval)
 library(tidyverse)
 library(trend)
+library(here)
+library(lubridate)
+library(plotly)
 library(lubridate)
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+
+
 
 ```
 
@@ -62,6 +67,10 @@ ggplot(gw_depth, aes(x = Date, y = water_depth)) +
   ylab('Ground Water Depth (feet)') +
   theme_bw()
 
+ggplotly(gw_depth %>%
+  ggplot(aes(x = Date, y = water_depth)) + 
+  geom_line(color = 'slateblue2'))
+
 #how can i make this an interacitve graph
 ```
 
@@ -78,6 +87,10 @@ ggplot(q_ca, aes(x = Date, y = q_cfs)) +
   geom_line(color = 'paleturquoise') + 
   ylab('Q (cfs)') +
   theme_bw()
+
+ggplotly(q_ca %>%
+  ggplot(aes(x = Date, y = q_cfs)) + 
+  geom_line(color = 'paleturquoise'))
 ```
 
 Discharge is influenced by many outside sources. The outputs along Hot Creek
@@ -97,11 +110,10 @@ sw_gw_graph <- ggplot() +
     geom_line(data = sw_gw, aes(x=Date, y=water_depth*3), color = 'slateblue2') +  
     geom_line(data = sw_gw, aes(x=Date, y=q_cfs), color = 'paleturquoise') 
 
-   
-sw_gw_graph + scale_y_continuous(sec.axis = sec_axis(~./3)) + 
-  theme_bw() + 
-  ylab("Discharge (cfs)") +
+sw_gw_graph + scale_y_continuous(name = "Dicharge (cfs)" , sec.axis = sec_axis(trans=~./3 , name= "Groundwater Depth (feet)")) +
+  theme_bw() +
   xlab("Date")
+
 ```
 
 Comparing ground water depths and surface water discharge rates can help show 
@@ -130,13 +142,18 @@ t_p_annual <- cbind(t_annual, p_annual) %>%
   select(-3)
 
 t_p <- ggplot() +
-  geom_line(data = t_p_annual, aes(x=year, y= Avrg_T), color = 'lightsalmon3') +
-  geom_line(data = t_p_annual, aes(x=year, y=Precip*10), color = 'darkslategray2') +
+  geom_line(data = t_p_annual, aes(x=year, y= Avrg_T), color = 'lightsalmon3', size= 1.2) +
+  geom_line(data = t_p_annual, aes(x=year, y=Precip*10), color = 'darkslategray2', size= 1.2)+
   xlab("Water Year") +
   scale_color_brewer(guide = "legend")
 
 t_p + scale_y_continuous(name = "Temp (F)" , sec.axis = sec_axis(trans=~./10 , name= "Precip (mm)")) +
   theme_bw()
+
+
+ggplotly(t_p_annual %>%
+  ggplot(aes(x=year, y= Avrg_T))+
+  geom_line())
                                             
 
 #how to put in legend
@@ -151,9 +168,6 @@ correlation between the two variables can be seen where there is a dip in temper
 precipitation shows and rise and when there is an increase in temperature there
 is a significant decrease in precipitation such as the section of data between 
 2010 and 2015. 
-
-
-#Look at data why is it a sharp decline at end of graph
 
 GW, Temp, Precip
 
@@ -214,7 +228,14 @@ ggplot(q_base, aes( x= year, y= q_mean)) +
   scale_y_log10() +
   ylab('Q (cfs)') +
   xlab('Water Year')+
-  scale_color_discrete()
+  scale_color_discrete(name = "Month", labels = c("July", "August", "September", "October"))
+
+
+
+ggplotly(q_base %>%
+  ggplot(aes(x= year, y = q_mean)) +
+  geom_point(aes(color = factor(month))) +
+  scale_y_log10())
 
 #shows variability between baseflow months over years, sometimes similar other times big difference between july and october 
 ```
@@ -228,6 +249,28 @@ values than the later months. Some years there are significant differences betwe
 each of the months such as the data from around 1995 and other years there is 
 a minimal change in discharge between the baseflow months such as the data around
 2020.
+
+Groundwater Baseflow Months
+```{r}
+gw_month <- gw_depth %>%
+  dplyr::mutate(month = month(Date),
+                year = year(Date)) %>%
+  group_by(year, month) %>%
+  summarize(water_depth = mean(water_depth, na.rm = T)) 
+
+
+gw_base <- gw_month %>% 
+  filter(month %in% c('7','8','9','10'))
+
+ggplot(gw_base, aes( x= year, y= water_depth)) +
+  geom_point(aes(color = factor(month))) +
+  scale_y_log10() +
+  ylab('Groundwater Depth (feet)') +
+  xlab('Water Year')+
+  scale_color_discrete(name = "Month", labels = c("July", "August", "September", "October"))
+
+```
+
 
 ## Statistical Trend Analysis
 
@@ -248,11 +291,21 @@ sens.slope(gw_depth$water_depth)
 ```
 
 ```{r}
-#Baseflow month trends
+#Baseflow months discharge trends
 
 mk.test(log10(q_base$q_mean))
 
 sens.slope(q_base$q_mean)
+
+```
+
+```{r}
+#Baseflow months groundwater depths
+
+mk.test(log10(gw_base$water_depth))
+
+sens.slope(gw_base$water_depth)
+
 ```
 
 ```{r}
