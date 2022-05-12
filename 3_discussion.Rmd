@@ -20,7 +20,7 @@ discharge rates.
    Using the Hot Creek site near Mammoths Lake, 
 California all four variables were able to be 
 measured and compared objectively. From this 
-report figures ****** and **** showed the trends
+report figures 4.1 and 4.2 showed the trends
 of groundwater and surface water discharge from 
 1992 to 2022. From these graphs, there are evident 
 positive trends in the groundwater data showing 
@@ -43,7 +43,7 @@ analyzed to correlate their effects.
 
    Temperature and precipitation were also analyzed
 for their trends before being compared
-for their effects on the water sources. Figure *****
+for their effects on the water sources. Figure 4.4
 shows the patterns of temperature and precipitation
 from 1992 to 2017. From this visual, it is interpreted
 that temperature and precipitation correlate
@@ -57,7 +57,7 @@ then quantified.
 
    How groundwater is affected by precipitation and
 temperature was the main relationship in consideration
-for this analysis. Figure ***** shows groundwater 
+for this analysis. Figure 4.5 shows groundwater 
 compared to temperature and precipitation. 
 By comparing groundwater to the climate 
 characteristics, further analysis on what types of trends can be predicted 
@@ -69,12 +69,12 @@ evaporation, recharge possibilities, and water needs for population use.
 
    The final comparison was to explore how these factors affect baseflow
 discharge knowing the strongest influences from groundwater on surface 
-water discharge is during baseflow [@kalbus_measuring_2006]. Figure ***** shows discharge 
+water discharge is during baseflow [@kalbus_measuring_2006]. Figure 4.6 shows discharge 
 for baseflow months with a variation of years where the months have little range
 and other years where there are major differences in July and October. When comparing
-these trends to baseflow months of groundwater depths, figure ****, it becomes
+these trends to baseflow months of groundwater depths, figure 4.7, it becomes
 apparent that there is not much overlap but when looking at the end of the study
-time, possible correlations are seen in October. Figure **** shows groundwater
+time, possible correlations are seen in October. Figure 4.8 shows groundwater
 depth and discharge for October and a noticeable trend is seen in how
 discharge decreases with an increasing water table depth, especially as time goes
 on. The lighter points representing later years show a significant increasing trend

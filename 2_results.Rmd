@@ -57,7 +57,7 @@ mam_climate <- read_csv('Date_Mammoth_climate.csv')
 
 ```
 
-## Attributes
+## Individual Variable Trends 
 
 Groundwater Depth 
 
@@ -66,10 +66,6 @@ ggplot(gw_depth, aes(x = Date, y = water_depth)) +
   geom_line(color = 'slateblue2') + 
   ylab('Ground Water Depth (feet)') +
   theme_bw()
-
-ggplotly(gw_depth %>%
-  ggplot(aes(x = Date, y = water_depth)) + 
-  geom_line(color = 'slateblue2'))
 
 ```
 
@@ -87,9 +83,6 @@ ggplot(q_ca, aes(x = Date, y = q_cfs)) +
   ylab('Q (cfs)') +
   theme_bw()
 
-ggplotly(q_ca %>%
-  ggplot(aes(x = Date, y = q_cfs)) + 
-  geom_line(color = 'paleturquoise'))
 ```
 
 Discharge is influenced by many outside sources. The outputs along Hot Creek
@@ -99,7 +92,7 @@ trend in annual ranges of discharge.
 
 ## Attribute Analysis 
 
-GW and SW Long
+GW and SW 
 
 ```{r, fig.cap= "Here a logistical comparison of groundwater and surface water discharge trends are shown for water years 1992 to 2022."}
 
@@ -161,7 +154,7 @@ precipitation shows a rise and when there is an increase in temperature there
 is a significant decrease in precipitation such as the section of data between 
 2010 and 2015. 
 
-GW, Temp, Precip
+GW, Temperature, Precipitation 
 
 ```{r, fig.cap= "Ground water levels compared to temperature and precipitation climate variables."}
 gw_annual <- gw_depth %>%
@@ -204,7 +197,7 @@ q_month_means <- q_ca %>%
 ```
 
 
-Discharge Trends for baseflow months
+Discharge Trends for Baseflow Months
 
 ```{r, fig.cap= "Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." }
 
@@ -231,7 +224,7 @@ a minimal change in discharge between the baseflow months such as the data aroun
 2020.
 
 Groundwater Baseflow Months
-```{r}
+```{r, fig.cap= "To analyze baseflow trends it is necessary to also view how groundwater levels change after warm temperature months." }
 gw_month <- gw_depth %>%
   dplyr::mutate(month = month(Date),
                 year = year(Date)) %>%
@@ -253,12 +246,12 @@ ggplot(gw_base, aes( x= year, y= water_depth)) +
 
 To compare groundwater with discharge during baseflow months the averages for 
 groundwater for the months of July - October are shown.Throughout the years in this
-study it is seen that groundwater during baseflow months has progressivley been 
+study it is seen that groundwater during baseflow months has progressively been 
 getting deeper.
 
 
 Groundwater and Q in October 
-```{r}
+```{r, fig.cap= "After plotting GW and Q for baseflow months a trend was seen in October. By showing this baseflow month, it allows for a more refined analysis of the relationship."}
 gw_10 <- gw_base %>%
   filter(month %in% ('10'))
 
@@ -330,8 +323,6 @@ test <- t_test %>%
 mk.test(log10(test$Avrg_T))
 
 sens.slope(test$Avrg_T)
-
-#not signigicant change of increasing temp by 0.05 degrees each year
 
 ```
 

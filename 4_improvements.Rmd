@@ -19,4 +19,5 @@ and discharge
 -Develop a better structure for what information goes into an abstract and 
 introduction
 -Include more citations 
+-Change discussion title on intro page
 

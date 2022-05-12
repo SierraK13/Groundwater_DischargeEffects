@@ -18,48 +18,49 @@ library(devtools)
 
 ## Site Description 
 
-  For this report, a more in depth analysis of how climate change 
-impacts the interactions between ground water
+  For this report, a more in-depth analysis of how climate change 
+impacts the interactions between groundwater
 and surface water will be reviewed  
 at stations near Mammoth Lakes California along Hot Creek. This
-site allows for water movement to be monitored due to the assumptions
-that groundwater due to various factors will later re-emerge into terrestrial
+site allows for water movement to be monitored under the assumptions
+that groundwater, due to various factors will later re-emerge into terrestrial
 water downstream of the groundwater source or aquifer [@kalbus_measuring_2006].
-Mammoth Lakes has a coincidental set up to show the process of water transfer between
-GW and SW due to a grouping of ground water monitors 
-upstream of a surface water monitor along Hot Creek. Mammoth
+Mammoth Lakes has a coincidental setup to show the process of water transfer between
+GW and SW due to a grouping of groundwater monitors 
+upstream of a surface water monitor along Hot Creek, however only one near the surface water monitor will be analyzed in this report. Mammoth
 Lakes is at 7,880 feet in elevation with soils of low infiltration
-and located in a pre-dominantly Mediterranean climate. 
+and located in a predominantly Mediterranean climate. 
 This particular site where factors such as climate, temperature, groundwater
-levels, and discharge can be monitored will allow this analysis to compare 
+levels and discharge can be monitored will allow this analysis to compare 
 climate changes to groundwater and surface water quantities. 
 
 ## Analysis Methods
 
-  Since this report was multifaceted there were many types of data that needed
+  Since this report was multifaceted many types of data were needed
 to be collected. Data for groundwater and surface water were pulled from USGS monitors
-and the climate data was retrieved from (uh??) The data was filtered to only 
-obtain ground water depth in feet, surface water discharge in cubic feet per
+and the climate data was retrieved from the USGS climate dashboard. The data was filtered to only 
+obtain groundwater depth in feet, surface water discharge in cubic feet per
 second, temperature in Fahrenheit, and precipitation in millimeters starting on 
-January 19, 1992 to April 6, 2022. General trends for groundwater 
-levels and surface water discharge rates to analyze on their own and then 
-by adjusting scales the two variable were compared on the same graph to show
-any relations between the two attributes. Once there was a general understanding
+January 19, 1992, to April 6, 2022. General trends for groundwater 
+levels and surface water discharge rates are to be analyzed on their own and then 
+by adjusting scales the two variables were compared on the same graph to show
+relations between the two attributes. Once there was a general understanding
 of the GW and SW relation the climate variables were introduced. Temperature and 
 precipitation were graphed together to show their correlation and allow for other
 interpretations to be made. Temperature and precipitation were then compared to
-ground water depths to show trends between changing climate variables and the 
+groundwater depths to show trends between changing climate variables and the 
 variability of the water table. To further analyze how surface discharge is affected 
-the baseflow moths of July through October were compared to show ranges of 
-discharge and infer water sources for the causes of large or minimal ranges between 
-the months. While some trends were evident through the figures it was important
-to objectify those relations by using statistical test to quantify the correlations.
-Non-parametric tests such as the Mann-Kendall and Sens Slope were used to greater
+the baseflow months of July through October were compared to show ranges of 
+discharge and infer types of water sources that caused large or minor ranges between 
+the months. While some trends were evident in the figures it was important
+to objectify those relations by using statistical tests to quantify the correlations.
+Non-parametric tests such as the Mann-Kendall and Sen’s Slope were used to greater
 support or contradict assumptions made from the figures. These tests also denoted
 the strength of the relationship between the various variables. These tests were
-used to analyze the significance of surface water and ground water changes, the 
+used to analyze the significance of surface water and groundwater changes. The test also quantified the 
 correlation between groundwater and surface water, the baseflow ranges, and 
-temperature changes throughout the study period. Using 
+temperature changes throughout the study period.  
+
 
 
 ## Watershed Delineation
@@ -78,7 +79,8 @@ CAwatershed <- st_read('MammothCA.geojson') %>% dplyr::filter(id== 'globalwaters
 mapview(CAwatershed) + mapview(site_coords_CA1)
 ```
 
-The delineated watershed shows the area that Hot Creek receives its water inputs. 
+The delineated watershed shows the area where Hot Creek receives its water inputs. 
 The surface water gauge is Hot Flume near Mammoth Lakes USGS 10265150. The 
-ground water monitor being used is upstream of the surface water monitor listed 
-as USGS 373930118491602. 
+groundwater monitor being used is upstream of the surface water monitor listed 
+as USGS 373930118491602.
+

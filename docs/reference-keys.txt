@@ -4,6 +4,8 @@ fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-12
+fig:unnamed-chunk-13
+fig:unnamed-chunk-14
 abstract
 introduction
 research-question
@@ -13,8 +15,9 @@ analysis-methods
 watershed-delineation
 results
 data-acquisition
-attributes
+individual-variable-trends
 attribute-analysis
 statistical-trend-analysis
 discussion
 conclusion
+report-improvements
