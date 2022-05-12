@@ -5,6 +5,5 @@ rmd_files:
   - "1_methods.Rmd"
   - "2_results.Rmd"
   - "3_discussion.Rmd"
-  - "4_improvements.Rmd"
   - "wrapping_up.Rmd"
 output_dir: "docs"   

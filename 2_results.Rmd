@@ -61,7 +61,7 @@ mam_climate <- read_csv('Date_Mammoth_climate.csv')
 
 Groundwater Depth 
 
-```{r, fig.width = 6,fig.height=7, fig.cap= "Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes."}
+```{r, fig.cap= "Groundwater depth for water years 1992 through 2022 at a ground water site near Mammoth Lakes."}
 ggplot(gw_depth, aes(x = Date, y = water_depth)) + 
   geom_line(color = 'slateblue2') + 
   ylab('Ground Water Depth (feet)') +
