@@ -9,35 +9,58 @@ output:
   #bookdown::pdf_book: default
 --- 
 
+# Abstract 
+
+  Society as a whole has put attention to conserving our natural resources 
+more than ever before due to pressures such as population growth, climate change,
+and an increasing interest in recreation. One of the most valuable resources in
+need of protection is our global freshwater supply. In areas such as Mammoth
+Lakes California where this study is based, effects of climate change can be 
+quantified and compared 
+to groundwater sources and surface water discharge where inferences on the trajectory
+of our water supply can be predicted. This report 
+in conjunction with others highlights the lesser-known linkages between
+climate variability, hydrogeology, and hydrologic regimes [@burak_climate_2015].
+Identifying correlations between these aspects create a space to acknowledge 
+the need to better conserve water sources either through restoration, management, 
+or policy changes.  
+
+
+
 # Introduction 
 
   Within recent decades groundwater research has increased in significance due to 
 its influential interactions with surface water. The 
 understanding of the exchanges between groundwater and surface water 
-has also gained popularity due to the effects on the global fresh water supply.
+has also gained popularity due to the effects on the global freshwater supply.
 Groundwater and surface water (GW, SW) are not independent sources 
 but rather influential systems 
-that effects several hydrologic characteristics such as baseflow and 
-recharge. As any other process, the hydrologic cycle is 
+that affects several hydrologic characteristics such as baseflow and 
+recharge. Like any other process, the hydrologic cycle is 
 effected by outside factors. The term "hydrogeologic environment" 
 coined by hydrogeologist J.Tóth denotes the need to acknowledge the 
 effects of topography, geology, and climate to further understand
-GW and SW interaction [@sophocleous_interactions_2002]. 
+GW and SW interactions [@sophocleous_interactions_2002]. 
 Previous research has often defined base flows of surface water 
-systems to be sourced by upstream ground water storage's 
+systems to be sourced by upstream groundwater storage 
 [@brutsaert_long-term_2008]. With this reference, benefits from
 looking at global changes in temperature and precipitation include 
-ways to predict ground water levels impacts on surface water 
-discharge and how the overall water budget is being effected by global 
-climate change [@huntington_role_2012].
+ways to predict groundwater levels and their impacts on surface water 
+discharge thus showing the influence on the overall water budget and its reactions
+to global climate change [@huntington_role_2012].
 
   As anthropogenic effects become more notable in nature it raises a need 
-to understand GW and SW exchanges in order to protect one of our most valuable
+to understand GW and SW exchanges to protect one of our most valuable
 resources. With activities such as mining and contaminated runoff it is valuable 
 to quantify flows between GW and SW to help mitigate damage to the riparian area
 and decrease harm to organisms who may ingest contaminated water 
-[@kalbus_measuring_2006]. Further studies of the lag 
-
+[@kalbus_measuring_2006]. Further studies of the lag between groundwater and 
+surface water would also prove to be beneficial in predicting future water supply
+trends. The benefits of prioritizing groundwater as a renewable water resource 
+would be worthwhile even if its effects are not quickly seen [@green_beneath_2011].
+By conducting research in areas where climate affects the water cycle it is 
+presumed that predictions of how water sources will change in upcoming years
+can be made. 
 
 
 ## Research Question

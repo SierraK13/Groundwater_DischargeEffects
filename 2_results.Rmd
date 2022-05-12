@@ -71,12 +71,11 @@ ggplotly(gw_depth %>%
   ggplot(aes(x = Date, y = water_depth)) + 
   geom_line(color = 'slateblue2'))
 
-#how can i make this an interacitve graph
 ```
 
 Groundwater depths near Mammoth Lakes, California have been progressively getting
-deeper since 1992. The graph shows the greatest decline happening between 2000 and
-200??. There is one trend after 2005?? that shows an increase in the water table 
+deeper since 1992. The graph shows the greatest trending decline was between 2000 and
+2003. There is one trend after 2006 that shows an increase in the water table 
 but after that spike in ground water recharge the depth goes down again significantly.
 Overall there is a positive relationship between ground water depths and time.
 
@@ -150,22 +149,15 @@ t_p <- ggplot() +
 t_p + scale_y_continuous(name = "Temp (F)" , sec.axis = sec_axis(trans=~./10 , name= "Precip (mm)")) +
   theme_bw()
 
-
-ggplotly(t_p_annual %>%
-  ggplot(aes(x=year, y= Avrg_T))+
-  geom_line())
-                                            
-
-#how to put in legend
 ```
 
 This graph compares the trends of temperature and precipitation over the studied 
-time frame. The temperature has a consitent pattern with no major spikes in 
+time frame. The temperature has a consistent pattern with no major spikes in 
 either decreasing or increasing temperatures, however it can be noted that there
 is a general upward trend in the temperature data. Precipitation is much more
 variable and has significant ranges over the years. Looking at the graph some
 correlation between the two variables can be seen where there is a dip in temperature
-precipitation shows and rise and when there is an increase in temperature there
+precipitation shows a rise and when there is an increase in temperature there
 is a significant decrease in precipitation such as the section of data between 
 2010 and 2015. 
 
@@ -184,9 +176,6 @@ layout(matrix(c(1,2), 1, 2, byrow = TRUE)) +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Avrg_T, col="lightsalmon3", pch = 16, main="Temperature", ylab = "Average Temperature (F)", xlab = "Water Depth (ft)") +
 plot(gw_tp_annual$water_depth, gw_tp_annual$Precip, col="darkslategray2", pch = 16, main="Precipitation", xlab = "Water Depth (ft)", ylab = "Precipitation (mm)") 
   
-#can interpret affects of t and p and then make prediction of how these variables affect GW and correlate that to the relation between gw and sw
-
-#could have made a graph with double axis of t p gw
 ```
 
 Ground water recharge is dependent on many factors but two climate variable that
@@ -218,8 +207,7 @@ q_month_means <- q_ca %>%
 Discharge Trends for baseflow months
 
 ```{r, fig.cap= "Baseflow is represented by the months between July and October. Here the diffrence between monthly discharge is shown." }
-#how to edit legend!!
-  
+
 q_base <- q_month_means %>% 
   filter(month %in% c('7','8','9','10'))
 
@@ -230,14 +218,6 @@ ggplot(q_base, aes( x= year, y= q_mean)) +
   xlab('Water Year')+
   scale_color_discrete(name = "Month", labels = c("July", "August", "September", "October"))
 
-
-
-ggplotly(q_base %>%
-  ggplot(aes(x= year, y = q_mean)) +
-  geom_point(aes(color = factor(month))) +
-  scale_y_log10())
-
-#shows variability between baseflow months over years, sometimes similar other times big difference between july and october 
 ```
 
 Baseflow discharge rates are generally supported by ground water sources. 
@@ -271,6 +251,36 @@ ggplot(gw_base, aes( x= year, y= water_depth)) +
 
 ```
 
+To compare groundwater with discharge during baseflow months the averages for 
+groundwater for the months of July - October are shown.Throughout the years in this
+study it is seen that groundwater during baseflow months has progressivley been 
+getting deeper.
+
+
+Groundwater and Q in October 
+```{r}
+gw_10 <- gw_base %>%
+  filter(month %in% ('10'))
+
+q_10 <- q_base %>%
+  filter(month %in% ('10'))
+
+
+gw_q <- left_join(gw_10, q_10)
+
+ggplot(gw_q, aes(x= q_mean, y= water_depth, color = year)) +
+  geom_point() +
+  labs(x= 'Q (cfs)', y= 'Groundwater (ft)') +
+  scale_color_continuous() +
+  theme_bw()
+
+```
+From the baseflow months it seems there were correlations between grounDwater and
+discharge particularly in the month of October. On the ground water versus discharge
+graph for October it is noticeable that water tables closer to the surface result
+in greater discharge values and as groundwater gets deeper the discharge decreases.
+In this graph it also shows the trend that over the years it is more common to see
+deeper water tables and less discharge in the Hot Creek stream. 
 
 ## Statistical Trend Analysis
 

@@ -1,15 +1,10 @@
-fig:unnamed-chunk-6-1
-fig:unnamed-chunk-6-2
-fig:unnamed-chunk-6-3
+fig:unnamed-chunk-6
 fig:unnamed-chunk-7
 fig:unnamed-chunk-8
-fig:unnamed-chunk-9-1
-fig:unnamed-chunk-9-2
-fig:unnamed-chunk-9-3
+fig:unnamed-chunk-9
 fig:unnamed-chunk-10
-fig:unnamed-chunk-12-1
-fig:unnamed-chunk-12-2
-fig:unnamed-chunk-12-3
+fig:unnamed-chunk-12
+abstract
 introduction
 research-question
 methods
@@ -22,3 +17,4 @@ attributes
 attribute-analysis
 statistical-trend-analysis
 discussion
+conclusion

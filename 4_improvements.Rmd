@@ -1,0 +1,22 @@
+---
+title: "improvements"
+author: "Sierra Klemme"
+date: "5/11/2022"
+output: html_document
+---
+
+# Report Improvements
+
+There are several action items I could take to better refine this report before 
+using it as a reference to my experience and knowledge. 
+
+Possible improvements include...
+
+-Correct legends on graphs
+-Find a better color scale for the October baseflow trend between groundwater 
+and discharge
+-Plot discharge and temperature and quantify their relationship 
+-Develop a better structure for what information goes into an abstract and 
+introduction
+-Include more citations 
+
